@@ -1,0 +1,131 @@
+@import "../../assets/scss/abstract/mixins";
+@import "../../assets/scss/abstract/variables";
+
+.header {
+    position: relative;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #9a8c98;
+        padding: 2rem;
+        border: 1px solid $black;
+    }
+
+    &__nav-container-logo {
+        width: 10%;
+        border: 1px solid #d00;
+
+        @include respond("lg") {
+            width: auto;
+        }
+    }
+
+    &__nav-logo {
+        width: 5rem;
+    }
+
+    &__nav-container-links {
+        width: 70%;
+        text-align: center;
+        border: 1px solid #d00;
+        @include respond("lg") {
+            display: none;
+        }
+    }
+
+    &__nav-menu-link {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    &__nav-container-social {
+        width: 10%;
+        border: 1px solid #d00;
+        @include respond("lg") {
+            display: none;
+        }
+    }
+
+    &__nav-social-icon {
+        font-size: 3rem;
+    }
+
+    &__nav-container-lines {
+        display: none;
+
+        @include respond("lg") {
+            display: block;
+            position: relative;
+            width: 5rem;
+            height: 4rem;
+            cursor: pointer;
+        }
+    }
+
+    &__nav-line {
+        position: absolute;
+        width: 4rem;
+        background-color: $black;
+        padding: .2rem;
+        transition: all .2s ease-in-out;
+        border-radius: 50px;
+    }
+
+    &__nav-line--one {
+        top: 20%;
+    }
+
+    &__nav-line--one-open {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    &__nav-line--two {
+        top: 40%;
+    }
+
+    &__nav-line--two-open {
+        display: none;
+    }
+
+    &__nav-line--three {
+        top: 60%;
+    }
+
+    &__nav-line--three-open {
+        top: 52%;
+        transform: rotate(135deg);
+    }
+
+    &__nav-mobile-menu-container {
+        display: none;
+        position: absolute;
+        width: 90%;
+        top: 90px;
+        left: -1000px;
+        padding: 2rem;
+        background-color: #9a8c98;
+        transition: all .2s;
+
+        @include respond("lg") {
+            display: block;
+        }
+    }
+
+    &__nav-mobile-menu-container--open {
+        left: 0;
+    }
+
+    &__nav-mobile-menu-item {
+        margin-bottom: 1.5rem;
+    }
+
+    &__container-content {
+        text-align: center;
+        padding: 5rem;
+        background-color: #f2e9e4;
+    }
+
+}

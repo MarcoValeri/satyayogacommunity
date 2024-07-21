@@ -1,10 +1,12 @@
-import './App.css'
+import Header from "./components/Header/Header";
+
+import "./assets/scss/main.scss";
 
 const App = () => {
     return (
-        <div>
-            <h2>Satya Yoga Community</h2>
-        </div>
+        <>
+            <Header />
+        </>
     )
 }
 
