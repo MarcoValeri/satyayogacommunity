@@ -1,0 +1,68 @@
+@import "../../assets/scss/abstract/mixins";
+@import "../../assets/scss/abstract/variables";
+
+.card-event {
+    width: 30rem;
+    overflow: hidden;
+    box-shadow: 2rem 1rem 1rem rgb(94, 49, 144, .2);
+    border: 1px solid $purpleYoga;
+    border-radius: 25px;
+
+    @include respond("md") {
+        width: 100%;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__container-icon {
+        text-align: left;
+        padding: 1rem;
+        background-color: $purpleYoga;
+    }
+
+    &__icon {
+        color: $white;
+        font-size: 5rem;
+        animation: lotusRotation 20s linear infinite;
+    }
+
+    &__container-title {
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 2px solid $purpleYoga;
+    }
+
+    &__container-date {
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 2px solid $purpleYoga;
+    }
+
+    &__container-description {
+        padding: 2rem 1rem;
+        border-bottom: 2px solid $purpleYoga;
+    }
+
+    &__container-button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 6rem;
+        text-align: right;
+        padding: 1rem;
+    }
+}
+
+@keyframes lotusRotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

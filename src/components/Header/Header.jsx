@@ -5,6 +5,7 @@ import { TfiEmail } from "react-icons/tfi";
 
 import ReactLogo from '../../assets/react.svg';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -22,9 +23,7 @@ const Header = () => {
                 </div>
                 <div className="header__nav-container-links">
                     <ul className="list-no-disk">
-                        <li className="header__nav-menu-link p-md">Home</li>
-                        <li className="header__nav-menu-link p-md">Home</li>
-                        <li className="header__nav-menu-link p-md">Home</li>
+                        <li className="header__nav-menu-link p-md"><Link to="/" className="header__nav-link link-no-style" rel="noopener noreferrer">Home</Link></li>
                     </ul>
                 </div>
                 <div className="header__nav-container-social">

@@ -1,11 +1,19 @@
-import Header from "./components/Header/Header";
+import { Route, Routes } from "react-router";
+
+import Home from "./pages/Home/Home";
+
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 import "./assets/scss/main.scss";
 
 const App = () => {
     return (
         <>
-            <Header />
+            <ScrollToTop>
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                </Routes>
+            </ScrollToTop>
         </>
     )
 }

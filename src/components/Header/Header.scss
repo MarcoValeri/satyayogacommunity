@@ -8,14 +8,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #9a8c98;
+        background-color: $brownYoga;
         padding: 2rem;
-        border: 1px solid $black;
     }
 
     &__nav-container-logo {
         width: 10%;
-        border: 1px solid #d00;
 
         @include respond("lg") {
             width: auto;
@@ -29,7 +27,7 @@
     &__nav-container-links {
         width: 70%;
         text-align: center;
-        border: 1px solid #d00;
+
         @include respond("lg") {
             display: none;
         }
@@ -40,9 +38,13 @@
         padding: 1rem;
     }
 
+    &__nav-link {
+        color: $black;
+    }
+
     &__nav-container-social {
         width: 10%;
-        border: 1px solid #d00;
+
         @include respond("lg") {
             display: none;
         }
@@ -106,7 +108,7 @@
         top: 90px;
         left: -1000px;
         padding: 2rem;
-        background-color: #9a8c98;
+        background-color: $brownYoga;
         transition: all .2s;
 
         @include respond("lg") {
@@ -125,7 +127,7 @@
     &__container-content {
         text-align: center;
         padding: 5rem;
-        background-color: #f2e9e4;
+        background-color: $pinkYoga;
     }
 
 }

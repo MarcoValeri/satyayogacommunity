@@ -1,0 +1,11 @@
+.home {
+    &__main {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 5rem;
+        padding: 5rem 2rem;
+        border: 1px solid #d00;
+    }
+}
