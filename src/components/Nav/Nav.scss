@@ -1,18 +1,15 @@
 @import "../../assets/scss/abstract/mixins";
 @import "../../assets/scss/abstract/variables";
 
-.header {
+.nav {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $greyYoga;
+    padding: 0 2rem;
 
-    &__nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: $brownYoga;
-        padding: 2rem;
-    }
-
-    &__nav-container-logo {
+    &__container-logo {
         width: 10%;
 
         @include respond("lg") {
@@ -20,11 +17,11 @@
         }
     }
 
-    &__nav-logo {
-        width: 5rem;
+    &__logo {
+        width: 10rem;
     }
 
-    &__nav-container-links {
+    &__container-links {
         width: 70%;
         text-align: center;
 
@@ -33,16 +30,16 @@
         }
     }
 
-    &__nav-menu-link {
+    &__menu-link {
         display: inline-block;
         padding: 1rem;
     }
 
-    &__nav-link {
+    &__link {
         color: $black;
     }
 
-    &__nav-container-social {
+    &__container-social {
         width: 10%;
 
         @include respond("lg") {
@@ -50,11 +47,11 @@
         }
     }
 
-    &__nav-social-icon {
+    &__social-icon {
         font-size: 3rem;
     }
 
-    &__nav-container-lines {
+    &__container-lines {
         display: none;
 
         @include respond("lg") {
@@ -66,7 +63,7 @@
         }
     }
 
-    &__nav-line {
+    &__line {
         position: absolute;
         width: 4rem;
         background-color: $black;
@@ -75,40 +72,41 @@
         border-radius: 50px;
     }
 
-    &__nav-line--one {
+    &__line--one {
         top: 20%;
     }
 
-    &__nav-line--one-open {
+    &__line--one-open {
         top: 50%;
         transform: rotate(45deg);
     }
 
-    &__nav-line--two {
+    &__line--two {
         top: 40%;
     }
 
-    &__nav-line--two-open {
+    &__line--two-open {
         display: none;
     }
 
-    &__nav-line--three {
+    &__line--three {
         top: 60%;
     }
 
-    &__nav-line--three-open {
+    &__line--three-open {
         top: 52%;
         transform: rotate(135deg);
     }
 
-    &__nav-mobile-menu-container {
+    &__mobile-menu-container {
         display: none;
         position: absolute;
         width: 90%;
-        top: 90px;
+        top: 110px;
         left: -1000px;
         padding: 2rem;
-        background-color: $brownYoga;
+        background-color: $greyYoga;
+        z-index: 1;
         transition: all .2s;
 
         @include respond("lg") {
@@ -116,18 +114,12 @@
         }
     }
 
-    &__nav-mobile-menu-container--open {
+    &__mobile-menu-container--open {
         left: 0;
     }
 
-    &__nav-mobile-menu-item {
+    &__mobile-menu-item {
         margin-bottom: 1.5rem;
-    }
-
-    &__container-content {
-        text-align: center;
-        padding: 5rem;
-        background-color: $pinkYoga;
     }
 
 }

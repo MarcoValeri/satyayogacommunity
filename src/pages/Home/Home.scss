@@ -1,11 +1,63 @@
+@import "../../assets/scss/abstract/mixins";
+@import "../../assets/scss/abstract/variables";
+
 .home {
-    &__main {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 5rem;
-        padding: 5rem 2rem;
-        border: 1px solid #d00;
+    &__header {
+        position: relative;
+        height: 80vh;
     }
+
+    &__header-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .5;
+    }
+
+    &__header-container-title {
+        position: absolute;
+        width: 80%;
+        top: 0%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, 10%);
+
+        @include respond("md") {
+            width: 100%;
+            top: 10%;
+        }
+
+    }
+
+    &__header-title {
+        font-size: 12rem;
+        letter-spacing: 40px;
+        color: $redYoga;
+        font-weight: 900;
+        margin-bottom: 8rem;
+
+        @include respond("xxl") {
+            margin-bottom: 6rem;
+        }
+
+        @include respond("md") {
+            font-size: 8rem;
+            letter-spacing: 20px;
+            margin-bottom: 5rem;
+        }
+
+        @include respond("sm") {
+            letter-spacing: 10px;
+        }
+    }
+
+    &__header-sub-title {
+        color: $redYoga;
+        margin-bottom: 10rem;
+
+        @include respond("xxl") {
+            margin-bottom: 5rem;
+        }
+    }
+
 }
