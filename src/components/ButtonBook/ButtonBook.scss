@@ -1,0 +1,17 @@
+@import "../../assets/scss/abstract/variables";
+
+.button-book {
+    font-size: 1.5rem;
+    color: $white;
+    background-color: $redYoga;
+    padding: .5rem 2rem;
+    border: 1px solid $redYoga;
+    border-radius: 20px;
+    transition: all .2s;
+
+    &:hover {
+        color: $redYoga;
+        background-color: $white;
+        border: 1px solid $redYoga;
+    }
+}
