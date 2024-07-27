@@ -1,72 +1,98 @@
+@import "../../assets/scss/abstract/mixins";
 @import "../../assets/scss/abstract/variables";
 
 .founders {
     position: relative;
     width: 100%;
-    height: 100vh;
-    border: 1px solid #d00;
+    height: 80vh;
 
-    &__container-white-small {
-        position: absolute;
-        width: 30%;
-        height: 2rem;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -0%);
-        background-color: $white;
-        z-index: 1;
-        border: 1px solid #00d;
-    }
-
-    &__container-pink {
+    &__container-background-pink {
         position: absolute;
         width: 100%;
-        height: 55%;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -0%);
+        height: 80%;
+        top: 0;
+        left: 0;
         background-color: $pinkYoga;
     }
 
-    &__container-title {
+    &__container-background-white {
         position: absolute;
-        width: 100%;
-        top: 10%;
+        width: 30%;
+        height: 2.5%;
+        top: 0%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        border: 1px solid #d00;
-    }
-
-    &__title {
-        color: $white;
-        letter-spacing: 10px;
-        font-weight: 500;
-    }
-
-    &__container-img {
-        position: absolute;
-        width: 70%;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    &__img {
-        width: 100%;
-        height: 100%;
+        transform: translate(-50%, 0%);
+        background-color: $white;
     }
 
     &__container-content {
         position: absolute;
-        width: 50%;
-        height: 15%;
-        top: 59%;
+        width: 70%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 2rem;
+        z-index: 1;
+
+        @include respond("md") {
+            width: 90%;
+        }
+    }
+
+    &__container-content-title {
+        color: $white;
+        margin-bottom: 5rem;
+    }
+
+    &__content-title {
+        text-align: center;
+    }
+
+    &__container-content-info {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+    }
+
+    &__container-content-info-image {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include respond("xxl") {
+            width: 100%;
+        }
+    }
+
+    &__content-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__container-content-info-card {
+        position: absolute;
+        width: 40%;
+        left: 50%;
+        bottom: 0%;
+        transform: translate(-50%, 0%);
+        padding: 1rem 2rem;
         background-color: $pinkYoga;
         border-bottom: 5px solid $redYoga;
+
+        @include respond("xxl") {
+            width: 60%;
+        }
+
+        @include respond("lg") {
+            width: 80%;
+        }
     }
+
+    &__container-content-info-card-p {
+        margin-bottom: 1rem;
+    }
+
 }

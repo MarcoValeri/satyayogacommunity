@@ -57,7 +57,7 @@ const Home = () => {
                     />
                 </div>
             </main>
-            {/* <Founders /> */}
+            <Founders />
         </div>
     )
 }
