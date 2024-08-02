@@ -31,9 +31,7 @@
 
     &__header-title {
         font-size: 12rem;
-        letter-spacing: 40px;
         color: $redYoga;
-        font-weight: 900;
         margin-bottom: 8rem;
 
         @include respond("xxl") {
@@ -42,13 +40,9 @@
 
         @include respond("md") {
             font-size: 8rem;
-            letter-spacing: 20px;
             margin-bottom: 5rem;
         }
 
-        @include respond("sm") {
-            letter-spacing: 10px;
-        }
     }
 
     &__header-sub-title {
@@ -69,10 +63,7 @@
         margin-bottom: 5rem;
     }
 
-    &__main-title {
-        font-weight: 500;
-        letter-spacing: 5px;
-    }
+    &__main-title {}
 
     &__main-container-classes {
         display: flex;

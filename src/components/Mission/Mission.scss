@@ -1,0 +1,46 @@
+@import "../../assets/scss/abstract/mixins";
+@import "../../assets/scss/abstract/variables";
+
+.mission {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $redYoga;
+    padding: 5rem 0;
+    margin-bottom: 5rem;
+
+    @include respond("md") {
+        flex-direction: column;
+    }
+    
+    &__container-logo {
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 5rem 2rem;
+
+        @include respond("md") {
+            width: auto;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__container-content {
+        width: 65%;
+        padding: 0 2rem;
+
+        @include respond("md") {
+            width: auto;
+        }
+    }
+
+    &__content {
+        color: $white;
+        margin-bottom: 2rem;
+    }
+}

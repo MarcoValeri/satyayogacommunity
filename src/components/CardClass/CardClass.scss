@@ -31,7 +31,6 @@
 
     &__title {
         text-transform: uppercase;
-        font-weight: 500;
 
         @include respond("md") {
             text-align: center;   
