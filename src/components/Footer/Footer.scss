@@ -1,0 +1,91 @@
+@import "../../assets/scss/abstract/mixins";
+@import "../../assets/scss/abstract/variables";
+
+.footer {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $pinkYogaLight;
+
+        @include respond("md") {
+            flex-direction: column;
+        }
+    }
+
+    &__container-credits {
+        width: 50%;
+        padding: 5rem;
+
+        @include respond("md") {
+            width: auto;
+            text-align: center;
+        }
+    }
+
+    &__container-credit-logo {}
+
+    &__logo {
+        width: 8rem;
+    }
+
+    &__container-credit-content {}
+
+    &__content {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        color: $black;
+    }
+
+    &__container-newsletter {
+        width: 50%;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 2rem 5rem;
+        background-color: $greyYoga;
+
+        @include respond("md") {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__nav-container-links {
+        margin-right: 5rem;
+
+        @include respond("md") {
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__nav-container-social {}
+
+    &__nav-menu {}
+
+    &__nav-link {
+        display: inline;
+        padding: 0 2rem;
+        cursor: pointer;
+
+        @include respond("md") {
+            display: block;
+        }
+    }
+
+    &__nav-link-social {
+        display: inline;
+        padding: 0 1rem;
+        cursor: pointer;
+
+        @include respond("md") {
+            display: block;
+        }
+    }
+}

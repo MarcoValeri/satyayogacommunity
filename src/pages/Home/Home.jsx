@@ -3,6 +3,7 @@ import Nav from "../../components/Nav/Nav";
 import CardClass from "../../components/CardClass/CardClass";
 import Founders from "../../components/Founders/Founders";
 import Mission from "../../components/Mission/Mission";
+import Footer from "../../components/Footer/Footer";
 
 import "./Home.scss";
 
@@ -62,6 +63,7 @@ const Home = () => {
             <Founders />
             <Mission />
             <Community />
+            <Footer />
         </div>
     )
 }

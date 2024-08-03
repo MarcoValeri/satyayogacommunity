@@ -1,11 +1,9 @@
-import "./Nav.scss";
-
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FiInstagram } from "react-icons/fi";
 import { TfiEmail } from "react-icons/tfi";
 
-import ReactLogo from '../../assets/react.svg';
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import "./Nav.scss";
 
 import SatyaYogaCommunityLogo from "../../images/satya-yoga-community-logo.png"
 
