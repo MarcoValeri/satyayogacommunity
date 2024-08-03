@@ -51,12 +51,12 @@ const Community = () => {
     }
 
     const carouselArr = [
-        SatyaYogaCollage,
-        SatyaYogaCommunity,
-        SatyaYogaFounders,
-        YogaOnTheBeach,
-        SatyaYogaCollage,
-        SatyaYogaCommunity
+        [SatyaYogaCollage, 'Satya Yoga Community collage with memebers and students'],
+        [SatyaYogaCommunity, 'Satya Yoga Community people after class'],
+        [SatyaYogaFounders, 'Satya Yoga Community founders'],
+        [YogaOnTheBeach, 'Satya Yoga Community on the beach'],
+        [SatyaYogaCollage, 'Satya Yoga Community collage with memebers and students'],
+        [SatyaYogaCommunity, 'Satya Yoga Community people after class']
     ];
 
     return (
@@ -69,7 +69,7 @@ const Community = () => {
                         carouselArr.map((itemImage, index) => {
                             return (
                                 <div key={index} className={`community__container-single-image community__container-single-image-${index + 1} ${carouselStatus ? carouselSlide === index ? 'community__container-single-image--show' : 'community__container-single-image--hide' : ''}`}>
-                                    <img className="community__image" src={itemImage} alt="Collage of some images about the Satya Yoga Community" />
+                                    <img className="community__image" src={itemImage[0]} alt={itemImage[1]} />
                                 </div>
                             )
                         })
