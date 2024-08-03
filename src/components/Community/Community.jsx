@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 
 import "./Community.scss";
@@ -10,53 +10,54 @@ import YogaOnTheBeach from "../../images/yoga-on-the-beach.webp";
 
 const Community = () => {
 
-    const [carousel, setCarousel] = useState([true, true, true, true, true, true]);
-    const [carouselSlide, setCarouselSlide] = useState(1);
-
-    const handleClickCarousel = direction => {
-        // if (direction === "right") {
-        //     console.log(`Statement 1`);
-        //     setCarouselSlide(carouselSlide => carouselSlide + 1);
-        // } else if (direction === "left") {
-        //     console.log(`Statement 2`);
-        //     setCarouselSlide(carouselSlide => carouselSlide - 1);
-        // }
-        setCarouselSlide(carouselSlide => carouselSlide + 1);
-
-        switch (carouselSlide) {
-            case 1:
-                console.log(`case 1`);
-                setCarousel([true, false, false, false, false, false]);
-                break;
-            case 2:
-                console.log(`case 2`);
-                setCarousel([false, true, false, false, false, false]);
-                break;
-            case 3:
-                console.log(`case 3`);
-                setCarousel([false, false, true, false, false, false]);
-                break;
-            case 4:
-                console.log(`case 4`);
-                setCarousel([false, false, false, true, false, false]);
-                break;
-            case 5:
-                console.log(`case 5`);
-                setCarousel([false, false, false, false, true, false]);
-                break;
-            case 6:
-                console.log(`case 6`);
-                setCarousel([false, false, false, false, false, true]);
-                break;
-            default:
-                console.log(`case default`);
-                setCarousel([true, false, false, false, false, false]);
+    const [carouselStatus, setCarouselStatus] = useState(false);
+    const [windowidth, setWindowWith] = useState(window.innerWidth);
+    const [carouselSlide, setCarouselSlide] = useState(0);
+    
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWith(window.innerWidth);
         }
 
-        console.log(`Click event`);
-        console.log(`carouselSlide: ${carouselSlide}`);
-        console.log(`carousel: ${carousel}`);
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (windowidth >= 992) {
+            setCarouselStatus(false);
+        }
+    }, [windowidth]);
+
+    const handleClickCarouselSlide = direction => {
+        setCarouselStatus(true);
+        setCarouselSlide(position => {
+            if (direction === 'left') {
+                if (position === 0) {
+                    return position = 5;
+                } else {
+                    return position - 1;
+                }
+            } else {
+                if (position === 5) {
+                    return position = 0;
+                } else {
+                    return position + 1;
+                }
+            }
+
+        })
     }
+
+    const carouselArr = [
+        SatyaYogaCollage,
+        SatyaYogaCommunity,
+        SatyaYogaFounders,
+        YogaOnTheBeach,
+        SatyaYogaCollage,
+        SatyaYogaCommunity
+    ];
 
     return (
         <div className="community">
@@ -64,24 +65,15 @@ const Community = () => {
             <div className="community__container-purple"></div>
             <div className="community__container-content">
                 <div className="community__container-content-image">
-                    <div className={`community__container-single-image community__container-single-image-one ${carousel[0] ? 'community__container-single-image--show' : 'community__container-single-image--hide'}`}>
-                        <img className="community__image" src={SatyaYogaCommunity} alt="Collage of some images about the Satya Yoga Community" />
-                    </div>
-                    <div className={`community__container-single-image community__container-single-image-two ${carousel[1] ? 'community__container-single-image--show' : 'community__container-single-image--hide'}`}>
-                        <img className="community__image" src={SatyaYogaFounders} alt="Collage of some images about the Satya Yoga Community" />
-                    </div>
-                    <div className={`community__container-single-image community__container-single-image-three ${carousel[2] ? 'community__container-single-image--show' : 'community__container-single-image--hide'}`}>
-                        <img className="community__image" src={YogaOnTheBeach} alt="Collage of some images about the Satya Yoga Community" />
-                    </div>
-                    <div className={`community__container-single-image community__container-single-image-four ${carousel[3] ? 'community__container-single-image--show' : 'community__container-single-image--hide'}`}>
-                        <img className="community__image" src={SatyaYogaCollage} alt="Collage of some images about the Satya Yoga Community" />
-                    </div>
-                    <div className={`community__container-single-image community__container-single-image-five ${carousel[4] ? 'community__container-single-image--show' : 'community__container-single-image--hide'}`}>
-                        <img className="community__image" src={YogaOnTheBeach} alt="Collage of some images about the Satya Yoga Community" />
-                    </div>
-                    <div className={`community__container-single-image community__container-single-image-six ${carousel[5] ? 'community__container-single-image--show' : 'community__container-single-image--hide'}`}>
-                        <img className="community__image" src={SatyaYogaFounders} alt="Collage of some images about the Satya Yoga Community" />
-                    </div>
+                    {
+                        carouselArr.map((itemImage, index) => {
+                            return (
+                                <div key={index} className={`community__container-single-image community__container-single-image-${index + 1} ${carouselStatus ? carouselSlide === index ? 'community__container-single-image--show' : 'community__container-single-image--hide' : ''}`}>
+                                    <img className="community__image" src={itemImage} alt="Collage of some images about the Satya Yoga Community" />
+                                </div>
+                            )
+                        })
+                    }
                 </div>
                 <div className="community__container-content-wording">
                     <h4 className="community__wording">OUR COMMUNITY</h4>
@@ -89,11 +81,11 @@ const Community = () => {
                 <div className="community__container-arrows">
                     <FaArrowLeftLong
                         className="community__arrow"
-                        onClick={() => handleClickCarousel("left")}
+                        onClick={() => handleClickCarouselSlide('left')}
                     />
                     <FaArrowRightLong
                         className="community__arrow"
-                        onClick={() => handleClickCarousel("right")}
+                        onClick={() => handleClickCarouselSlide('right')}
                     />
                 </div>
             </div>
