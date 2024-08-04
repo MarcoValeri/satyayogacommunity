@@ -20,7 +20,7 @@ const Home = () => {
                     <h1 className="home__header-title">SATYA YOGA</h1>
                     <h2 className="home__header-sub-title h2">JOIN THE COMMUNITY</h2>
                     <ButtonSquare
-                        url="/"
+                        url="/about"
                         content="ABOUT US"
                     />
                 </div>
@@ -51,7 +51,7 @@ const Home = () => {
                 </div>
                 <div className="home__main-container-buttons">
                     <ButtonSquare
-                        url="/"
+                        url="/classes"
                         content="CLASSES"
                     />
                     <ButtonSquare

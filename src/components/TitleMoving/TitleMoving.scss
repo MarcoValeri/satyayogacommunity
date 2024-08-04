@@ -1,0 +1,44 @@
+@import "../../assets/scss/abstract/mixins";
+@import "../../assets/scss/abstract/variables";
+
+.title-moving {
+    margin: 0 auto 10rem auto;
+    overflow: hidden;
+
+    &__container-title {
+        width: 2200rem;
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__title {
+        color: $redYoga;
+        margin: 0 50rem;
+        animation: slide 120s linear infinite;
+
+        @include respond("xl") {
+            margin: 0 40rem;
+        }
+
+        @include respond("lg") {
+            margin: 0 30rem;
+        }
+
+        @include respond("md") {
+            margin: 0 20rem;
+        }
+
+        @include respond("sm") {
+            margin: 0 10rem;
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0, 0 0);
+    }
+    100% {
+        transform: translate3d(-800rem, 0, 0);
+    }
+}
