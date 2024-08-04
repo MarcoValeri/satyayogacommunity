@@ -28,8 +28,8 @@ const Nav = () => {
             </div>
             <div className="nav__container-social">
                 <ul className="list-no-disk">
-                    <li className="nav__menu-link"><FiInstagram className="nav__social-icon" /></li>
-                    <li className="nav__menu-link"><TfiEmail className="nav__social-icon" /></li>
+                    <li className="nav__menu-link"><a className="footer__link link-no-style" href="https://www.instagram.com/Satyayogacommunity/" target="_blank"><FiInstagram className="nav__social-icon" /></a></li>
+                    <li className="nav__menu-link"><a className="footer__link link-no-style" href="mailto:hello@satyayogacommunity.com"><TfiEmail className="nav__social-icon" /></a></li>
                 </ul>
             </div>
             <div className="nav__container-lines" onClick={handleOpenMobileMenuClick}>
@@ -37,12 +37,12 @@ const Nav = () => {
                 <span className={`nav__line nav__line--two ${navMobileOpen && 'nav__line--two-open'}`}></span>
                 <span className={`nav__line nav__line--three ${navMobileOpen && 'nav__line--three-open'}`}></span>
             </div>
-            <div className={`nav__mobile-menu-container ${navMobileOpen && 'nav__mobile-menu-container--open'}`}>
+            <div className={`nav__mobile-menu-container ${navMobileOpen && 'nav__mobile-menu-container--open'}`} onClick={handleOpenMobileMenuClick}>
                 <ul className="list-no-disk">
                     <li className="nav__mobile-menu-item p-xl"><Link to="/" className="nav__link link-no-style" rel="noopener noreferrer">Home</Link></li>
-                    <li className="nav__mobile-menu-item p-xl"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About</Link></li>
-                    <li className="nav__mobile-menu-item"><FiInstagram className="nav__social-icon" /></li>
-                    <li className="nav__mobile-menu-item"><TfiEmail className="nav__social-icon" /></li>
+                    {/* <li className="nav__mobile-menu-item p-xl"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About</Link></li> */}
+                    <li className="nav__mobile-menu-item"><a className="footer__link link-no-style" href="https://www.instagram.com/Satyayogacommunity/" target="_blank"><FiInstagram className="nav__social-icon" /></a></li>
+                    <li className="nav__mobile-menu-item"><a className="footer__link link-no-style" href="mailto:hello@satyayogacommunity.com"><TfiEmail className="nav__social-icon" /></a></li>
                 </ul>
             </div>
         </nav>

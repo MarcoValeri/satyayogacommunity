@@ -27,14 +27,14 @@ const Footer = () => {
             <div className="footer__nav">
                 <div className="footer__nav-container-links">
                     <ul className="footer__nav-menu list-no-disk">
-                        <li className="footer__nav-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About Us</Link></li>
-                        <li className="footer__nav-link p-md"><Link to="/" className="nav__link link-no-style" rel="noopener noreferrer">Contact Us</Link></li>
+                        {/* <li className="footer__nav-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About Us</Link></li> */}
+                        {/* <li className="footer__nav-link p-md"><Link to="/" className="nav__link link-no-style" rel="noopener noreferrer">Contact Us</Link></li> */}
                     </ul>
                 </div>
                 <div className="footer__nav-container-social">
                     <ul className="footer__nav-menu list-no-disk">
-                        <li className="footer__nav-link-social"><FiInstagram className="nav__social-icon" /></li>
-                        <li className="footer__nav-link-social"><TfiEmail className="nav__social-icon" /></li>
+                        <li className="footer__nav-link-social"><a className="footer__link link-no-style" href="https://www.instagram.com/Satyayogacommunity/" target="_blank"><FiInstagram className="nav__social-icon" /></a></li>
+                        <li className="footer__nav-link-social"><a className="footer__link link-no-style" href="mailto:hello@satyayogacommunity.com"><TfiEmail className="nav__social-icon" /></a></li>
                     </ul>
                 </div>
             </div>
