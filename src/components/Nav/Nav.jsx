@@ -23,7 +23,7 @@ const Nav = () => {
             <div className="nav__container-links">
                 <ul className="list-no-disk">
                     <li className="nav__menu-link p-md"><Link to="/" className="nav__link link-no-style" rel="noopener noreferrer">Home</Link></li>
-                    <li className="nav__menu-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About</Link></li>
+                    {/* <li className="nav__menu-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About</Link></li> */}
                 </ul>
             </div>
             <div className="nav__container-social">
