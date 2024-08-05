@@ -18,7 +18,9 @@ const Nav = () => {
     return (
         <nav className="nav">
             <div className="nav__container-logo">
-                <img className="nav__logo" src={SatyaYogaCommunityLogo} alt="Satya Yoga Community Logo" />
+                <Link to="/" className="nav__link link-no-style" rel="noopener noreferrer">
+                    <img className="nav__logo" src={SatyaYogaCommunityLogo} alt="Satya Yoga Community Logo" />
+                </Link>
             </div>
             <div className="nav__container-links">
                 <ul className="list-no-disk">
