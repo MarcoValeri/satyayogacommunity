@@ -1,0 +1,26 @@
+@import "../../../assets/scss/abstract/mixins";
+@import "../../../assets/scss/abstract/variables";
+
+.admin-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-top: 3px solid $redYoga;
+    border-bottom: 3px solid $redYoga;
+
+    @include respond("md") {
+        flex-direction: column;
+    }
+
+    &__container-content {
+        @include respond("md") {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__container-menu {
+        @include respond("md") {
+            text-align: right;
+        }
+    }
+}

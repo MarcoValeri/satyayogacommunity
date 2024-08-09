@@ -11,6 +11,8 @@ import ProtectedRoute from "./admin/ProtectedRoute/ProtectedRoute";
 import AdminDashboard from "./admin/pages/AdminDashboard/AdminDashboard";
 
 import "./assets/scss/main.scss";
+import AdminClassAdd from "./admin/pages/AdminClassAdd/AdminClassAdd";
+import AdminClasses from "./admin/pages/AdminClasses/AdminClasses";
 
 const App = () => {
 
@@ -26,6 +28,8 @@ const App = () => {
                         <Route path="/login" element={<AdminLogin />} />
                         <Route path="/admin" element={<ProtectedRoute><Outlet /></ProtectedRoute>} >
                             <Route path="dashboard" element={<AdminDashboard />} />
+                            <Route path="class-add" element={<AdminClassAdd />} />
+                            <Route path="classes" element={<AdminClasses />} />
                         </Route>
                     </Routes>
                 </AuthProvider>

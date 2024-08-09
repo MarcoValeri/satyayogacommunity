@@ -1,12 +1,15 @@
-import ButtonLogout from "../../components/ButtonLogout/ButtonLogout";
+import AdminMenu from "../../components/AdminMenu/AdminMenu";
+
 import "./AdminDashboard.scss";
 
 const AdminDashboard = () => {
+
     return (
-        <div>
-            <h2>AdminDashboard</h2>
-            <ButtonLogout />
-        </div>
+        <AdminMenu>
+            <div className="admin-dashboard">
+                <h2 className="h2">AdminDashboard</h2>
+            </div>
+        </AdminMenu>
     )
 }
 

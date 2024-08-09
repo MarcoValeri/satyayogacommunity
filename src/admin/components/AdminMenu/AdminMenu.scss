@@ -1,0 +1,52 @@
+@import "../../../assets/scss/abstract/mixins";
+@import "../../../assets/scss/abstract/variables";
+
+.admin-menu {
+    height: 90vh;
+    display: flex;
+    padding: 0 2rem;
+    border-bottom: 3px solid $redYoga;
+
+    @include respond("md") {
+        flex-direction: column;
+    }
+
+    &__container-sidebar {
+        width: 20%;
+        padding: 2rem 0;
+        border-right: 3px solid $redYoga;
+
+        @include respond("md") {
+            width: auto;
+            border-right: none;
+            border-bottom: 3px solid $redYoga;
+        }
+    }
+
+    &__sidebar-item {
+        list-style: none;
+        margin-bottom: 1rem;
+    }
+
+    &__sidebar-item-link {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        color: $black;
+
+        &:hover {
+            color: $redYoga;
+        }
+    }
+
+    &__sidebar-item-icon {
+        &:hover {
+            color: $redYoga;
+        }
+    }
+
+    &__container-menu {
+        width: 70%;
+        padding: 2rem;
+    }
+}
