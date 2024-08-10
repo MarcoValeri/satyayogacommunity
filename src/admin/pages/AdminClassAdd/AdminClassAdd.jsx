@@ -17,6 +17,12 @@ const AdminClassAdd = () => {
     const [newClass, setNewClass] = useState({
         title: '',
         date: '',
+        duration: '',
+        location: '',
+        locationMap: '',
+        teacher: '',
+        teacherLink: '',
+        booking: ''
     });
 
 
@@ -34,31 +40,37 @@ const AdminClassAdd = () => {
 
     const handleClassDurationChange = e => {
         setClassDuration(e.target.value);
+        setNewClass({...newClass, duration: e.target.value});
         console.log(classDuration);
     }
 
     const handleClassLocationChange = e => {
         setClassLocation(e.target.value);
+        setNewClass({...newClass, location: e.target.value});
         console.log(classLocation);
     }
 
     const handleClassLocationMapChange = e => {
         setClassLocationMap(e.target.value);
+        setNewClass({...newClass, locationMap: e.target.value});
         console.log(classLocationMap);
     }
 
     const handleClassTeacherChange = e => {
         setClassTeacher(e.target.value);
+        setNewClass({...newClass, teacher: e.target.value});
         console.log(classTeacher);
     }
 
     const handleClassTeacherLinkChange = e => {
         setClassTeacherLink(e.target.value);
+        setNewClass({...newClass, teacherLink: e.target.value});
         console.log(classTeacherLink);
     }
 
     const handleClassBookingChange = e => {
         setClassBooking(e.target.value);
+        setNewClass({...newClass, booking: e.target.value});
         console.log(classBooking);
     }
 
@@ -79,6 +91,7 @@ const AdminClassAdd = () => {
 
         if (false) {
             dbAddClass(newClass);
+            // TODO: redirect to classes
         }
     }
 

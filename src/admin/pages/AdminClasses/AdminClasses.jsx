@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { dbGetClasses } from "../../../db/dbGetClasses";
+import { Link } from "react-router-dom";
 import AdminMenu from "../../components/AdminMenu/AdminMenu";
+
 import "./AdminClasses.scss";
 
 const AdminClasses = () => {
@@ -55,7 +57,16 @@ const AdminClasses = () => {
         <AdminMenu>
             <div className="admin-classes">
                 <h2>AdminClasses</h2>
-                <p>Classes are ready</p>
+                {classes.map((singleClass) => {
+                    return (
+                        <div key={singleClass.id}>
+                            <p>{singleClass.title}</p>
+                            <Link to={`/admin/class-edit/${singleClass.id}`}>edit</Link>
+                            <br/>
+                            <Link to={`/admin/class-delete/${singleClass.id}`}>delete</Link>
+                        </div>
+                    )
+                })}
             </div>
         </AdminMenu>
     )

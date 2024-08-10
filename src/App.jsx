@@ -6,13 +6,16 @@ import Classes from "./pages/Classes/Classes";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import AdminLogin from "./pages/AdminLogin/AdminLogin";
-import { AuthProvider } from "./hooks/AuthContext";
 import ProtectedRoute from "./admin/ProtectedRoute/ProtectedRoute";
 import AdminDashboard from "./admin/pages/AdminDashboard/AdminDashboard";
-
-import "./assets/scss/main.scss";
 import AdminClassAdd from "./admin/pages/AdminClassAdd/AdminClassAdd";
 import AdminClasses from "./admin/pages/AdminClasses/AdminClasses";
+import AdminClassEdit from "./admin/pages/AdminClassEdit/AdminClassEdit";
+
+import { AuthProvider } from "./hooks/AuthContext";
+
+import "./assets/scss/main.scss";
+import AdminClassDelete from "./admin/pages/AdminClassDelete/AdminClassDelete";
 
 const App = () => {
 
@@ -30,6 +33,8 @@ const App = () => {
                             <Route path="dashboard" element={<AdminDashboard />} />
                             <Route path="class-add" element={<AdminClassAdd />} />
                             <Route path="classes" element={<AdminClasses />} />
+                            <Route path="class-edit/:classId" element={<AdminClassEdit />} />
+                            <Route path="class-delete/:classId" element={<AdminClassDelete />} />
                         </Route>
                     </Routes>
                 </AuthProvider>
