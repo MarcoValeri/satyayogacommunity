@@ -1,0 +1,22 @@
+.card-class-book {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #d00;
+
+    &__container-info {
+        width: 20%;
+        border: 1px solid #00d;
+    }
+
+    &__container-data {
+        width: 50%;
+        border: 1px solid #00d;
+    }
+
+    &__container-book {
+        width: 10%;
+        border: 1px solid #00d;
+    }
+}
