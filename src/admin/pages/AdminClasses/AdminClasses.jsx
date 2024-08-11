@@ -27,10 +27,6 @@ const AdminClasses = () => {
         fetchClasses();
     }, []);
 
-    // TEST
-    console.log(`Test`);
-    console.log(classes);
-
     if (loading) {
         return (
             <AdminMenu>
@@ -56,14 +52,19 @@ const AdminClasses = () => {
     return (
         <AdminMenu>
             <div className="admin-classes">
-                <h2>AdminClasses</h2>
+                <h2 className="admin-classes__title h2">AdminClasses</h2>
                 {classes.map((singleClass) => {
                     return (
-                        <div key={singleClass.id}>
-                            <p>{singleClass.title}</p>
-                            <Link to={`/admin/class-edit/${singleClass.id}`}>edit</Link>
-                            <br/>
-                            <Link to={`/admin/class-delete/${singleClass.id}`}>delete</Link>
+                        <div key={singleClass.id} className="admin-classes__container-class">
+                            <p className="h4">{singleClass.title}</p>
+                            <p className="p">{singleClass.date}</p>
+                            <p className="p">{singleClass.teacher}</p>
+                            <p className="p">{singleClass.location}</p>
+                            <div className="admin-classes__container-class-buttons">
+                                <Link className="button button__red" to={`/admin/class-edit/${singleClass.id}`}>edit</Link>
+                                <br/>
+                                <Link className="button button__red"  to={`/admin/class-delete/${singleClass.id}`}>delete</Link>
+                            </div>
                         </div>
                     )
                 })}

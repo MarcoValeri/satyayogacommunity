@@ -1,3 +1,33 @@
+@import "../../../assets/scss/abstract/mixins";
+@import "../../../assets/scss/abstract/variables";
+
 .admin-class-add {
-    border: 1px solid #d00;
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__info {
+        color: $redYoga;
+        margin-bottom: 2rem;
+    }
+
+    &__error {
+        color: $redError;
+        margin-bottom: 2rem;
+    }
+
+    &__form {}
+
+    &__container-form-input {
+        margin-bottom: 2rem;
+    }
+
+    &__form-input {
+        width: 50%;
+
+        @include respond("md") {
+            width: 80%;
+        }
+    }
 }

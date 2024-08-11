@@ -1,3 +1,28 @@
+@import "../../assets/scss/abstract/variables";
+
 .admin-login {
-    border: 1px solid #d00;
+    padding: 5rem;
+
+    &__container-title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__container-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__form {}
+
+    &__form-container-input {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__form-error {
+        color: $redError;
+    }
 }

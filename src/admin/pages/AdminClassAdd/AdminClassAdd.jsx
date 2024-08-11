@@ -1,19 +1,16 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import AdminMenu from "../../components/AdminMenu/AdminMenu";
+import { dbAddClass } from "../../../db/dbAddClass";
+import { formSanitiseStringInput } from "../../../util/formValidation";
 
 import "./AdminClassAdd.scss";
-import { dbAddClass } from "../../../db/dbAddClass";
 
 const AdminClassAdd = () => {
+    const navigate = useNavigate();
 
-    const [classTitle, setClassTitle] = useState();
-    const [classDate, setClassDate] = useState();
-    const [classDuration, setClassDuration] = useState();
-    const [classLocation, setClassLocation] = useState();
-    const [classLocationMap, setClassLocationMap] = useState();
-    const [classTeacher, setClassTeacher] = useState();
-    const [classTeacherLink, setClassTeacherLink] = useState();
-    const [classBooking, setClassBooking] = useState();
+    let isFormValid = false;
+
     const [newClass, setNewClass] = useState({
         title: '',
         date: '',
@@ -24,84 +21,109 @@ const AdminClassAdd = () => {
         teacherLink: '',
         booking: ''
     });
-
+    const [areFormInputsValid, setAreFormInputsValid] = useState([false, false, false, false, false, false]);
+    const [formError, setFormError] = useState(false);
 
     const handleClassTitleChange = e => {
-        setClassTitle(e.target.value);
-        setNewClass({...newClass, title: e.target.value});
-        console.log(classTitle);
+        let inputString = formSanitiseStringInput(e.target.value);
+        setNewClass({...newClass, title: inputString});
+        setAreFormInputsValid(areFormInputsValid => {
+            const updatedState = [...areFormInputsValid];
+            updatedState[0] = true;
+            return updatedState;
+        });
     }
 
     const handleClassDateChange = e => {
-        setClassDate(e.target.value);
-        setNewClass({...newClass, date: e.target.value});
-        console.log(classDate);
+        let inputString = formSanitiseStringInput(e.target.value);
+        setNewClass({...newClass, date: inputString});
+        setAreFormInputsValid(areFormInputsValid => {
+            const updatedState = [...areFormInputsValid];
+            updatedState[1] = true;
+            return updatedState;
+        });
     }
 
     const handleClassDurationChange = e => {
-        setClassDuration(e.target.value);
-        setNewClass({...newClass, duration: e.target.value});
-        console.log(classDuration);
+        let inputString = formSanitiseStringInput(e.target.value);
+        setNewClass({...newClass, duration: inputString});
+        setAreFormInputsValid(areFormInputsValid => {
+            const updatedState = [...areFormInputsValid];
+            updatedState[2] = true;
+            return updatedState;
+        });
     }
 
     const handleClassLocationChange = e => {
-        setClassLocation(e.target.value);
-        setNewClass({...newClass, location: e.target.value});
-        console.log(classLocation);
+        let inputString = formSanitiseStringInput(e.target.value);
+        setNewClass({...newClass, location: inputString});
+        setAreFormInputsValid(areFormInputsValid => {
+            const updatedState = [...areFormInputsValid];
+            updatedState[3] = true;
+            return updatedState;
+        });
     }
 
     const handleClassLocationMapChange = e => {
-        setClassLocationMap(e.target.value);
-        setNewClass({...newClass, locationMap: e.target.value});
-        console.log(classLocationMap);
+        let inputString = formSanitiseStringInput(e.target.value);
+        setNewClass({...newClass, locationMap: inputString});
     }
 
     const handleClassTeacherChange = e => {
-        setClassTeacher(e.target.value);
-        setNewClass({...newClass, teacher: e.target.value});
-        console.log(classTeacher);
+        let inputString = formSanitiseStringInput(e.target.value);
+        setNewClass({...newClass, teacher: inputString});
+        setAreFormInputsValid(areFormInputsValid => {
+            const updatedState = [...areFormInputsValid];
+            updatedState[4] = true;
+            return updatedState;
+        });
     }
 
     const handleClassTeacherLinkChange = e => {
-        setClassTeacherLink(e.target.value);
-        setNewClass({...newClass, teacherLink: e.target.value});
-        console.log(classTeacherLink);
+        let inputString = formSanitiseStringInput(e.target.value);
+        setNewClass({...newClass, teacherLink: inputString});
     }
 
     const handleClassBookingChange = e => {
-        setClassBooking(e.target.value);
-        setNewClass({...newClass, booking: e.target.value});
-        console.log(classBooking);
+        let inputString = formSanitiseStringInput(e.target.value);
+        setNewClass({...newClass, booking: inputString});
+        setAreFormInputsValid(areFormInputsValid => {
+            const updatedState = [...areFormInputsValid];
+            updatedState[5] = true;
+            return updatedState;
+        });
     }
 
     const handleSubmitForm = async (e) => {
         e.preventDefault();
-        console.log(`classTitle: ${classTitle}`);
-        console.log(`classDate: ${classDate}`);
-        console.log(`classDuration: ${classDuration}`);
-        console.log(`classLocation: ${classLocation}`);
-        console.log(`classLocationMap: ${classLocationMap}`);
-        console.log(`classTeacher: ${classTeacher}`);
-        console.log(`classTeacherLink: ${classTeacherLink}`);
-        console.log(`classBooking: ${classBooking}`);
 
-        console.log(`newClass: ${newClass}`);
-        console.log(newClass.title);
-        console.log(newClass.date);
+        for (let i = 0; i < areFormInputsValid.length; i++) {
+            if (areFormInputsValid[i] === true) {
+                isFormValid = true;
+            } else {
+                isFormValid = false;
+                break;
+            }
+        }
 
-        if (false) {
+        if (isFormValid) {
             dbAddClass(newClass);
-            // TODO: redirect to classes
+            return navigate('/admin/classes')
+        } else {
+            setFormError(true);
         }
     }
 
     return (
         <AdminMenu>
             <div className="admin-class-add">
-                <h2 className="h2">Add new class</h2>
-                <form onSubmit={handleSubmitForm}>
-                    <div>
+                <h2 className="admin-class-add__title h2">Add new class</h2>
+                <p className="admin-class-add__info p">* fields required</p>
+                <p className="admin-class-add__error p">{formError && 'Impossible to save this class, please check all the above fields'}</p>
+                <form className="admin-class-add__form" onSubmit={handleSubmitForm}>
+                    <div className="admin-class-add__container-form-input">
                         <input
+                            className="admin-class-add__form-input input-text"
                             type="text"
                             name="class-title"
                             placeholder="Title*"
@@ -109,16 +131,18 @@ const AdminClassAdd = () => {
                             required
                         />
                     </div>
-                    <div>
+                    <div className="admin-class-add__container-form-input">
                         <input
+                            className="input-text"
                             type="datetime-local"
                             name="class-datetime"
                             onChange={handleClassDateChange}
                             required
                         />
                     </div>
-                    <div>
+                    <div className="admin-class-add__container-form-input">
                         <input
+                            className="admin-class-add__form-input input-text"
                             type="text"
                             name="class-duration"
                             placeholder="Duration*"
@@ -126,8 +150,9 @@ const AdminClassAdd = () => {
                             required
                         />
                     </div>
-                    <div>
+                    <div className="admin-class-add__container-form-input">
                         <input
+                            className="admin-class-add__form-input input-text"
                             type="text"
                             name="class-location"
                             placeholder="Location*"
@@ -135,16 +160,18 @@ const AdminClassAdd = () => {
                             required
                         />
                     </div>
-                    <div>
+                    <div className="admin-class-add__container-form-input">
                         <input
+                            className="admin-class-add__form-input input-text"
                             type="url"
                             name="class-location-map"
                             placeholder="Location Map"
                             onChange={handleClassLocationMapChange}
                         />
                     </div>
-                    <div>
+                    <div className="admin-class-add__container-form-input">
                         <input
+                            className="admin-class-add__form-input input-text"
                             type="text"
                             name="class-teacher"
                             placeholder="Teacher*"
@@ -152,16 +179,18 @@ const AdminClassAdd = () => {
                             required
                         />
                     </div>
-                    <div>
+                    <div className="admin-class-add__container-form-input">
                         <input
+                            className="admin-class-add__form-input input-text"
                             type="text"
                             name="class-teacher-link"
                             placeholder="Teacher link"
                             onChange={handleClassTeacherLinkChange}
                         />
                     </div>
-                    <div>
+                    <div className="admin-class-add__container-form-input">
                         <input
+                            className="admin-class-add__form-input input-text"
                             type="url"
                             name="class-url"
                             placeholder="Booking link*"
@@ -169,8 +198,8 @@ const AdminClassAdd = () => {
                             required
                         />
                     </div>
-                    <div>
-                        <input type="submit" name="class-add" value="Add a new class" />
+                    <div className="admin-class-add__container-form-input">
+                        <input className="button button__red" type="submit" name="class-add" value="Add a new class" />
                     </div>
                 </form>
             </div>

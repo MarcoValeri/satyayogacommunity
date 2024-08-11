@@ -2,7 +2,7 @@
 @import "../../../assets/scss/abstract/variables";
 
 .admin-menu {
-    height: 90vh;
+    height: auto;
     display: flex;
     padding: 0 2rem;
     border-bottom: 3px solid $redYoga;
@@ -48,5 +48,10 @@
     &__container-menu {
         width: 70%;
         padding: 2rem;
+
+        @include respond("md") {
+            width: auto;
+            padding: 2rem 0;
+        }
     }
 }
