@@ -117,8 +117,8 @@ const AdminClassAdd = () => {
     return (
         <AdminMenu>
             <div className="admin-class-add">
-                <h2 className="admin-class-add__title h2">Add new class</h2>
-                <p className="admin-class-add__info p">* fields required</p>
+                <h2 className="admin-class-add__title h2">Add a new class</h2>
+                <p className="admin-class-add__info p">* field required</p>
                 <p className="admin-class-add__error p">{formError && 'Impossible to save this class, please check all the above fields'}</p>
                 <form className="admin-class-add__form" onSubmit={handleSubmitForm}>
                     <div className="admin-class-add__container-form-input">

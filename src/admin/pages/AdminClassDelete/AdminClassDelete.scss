@@ -1,1 +1,37 @@
-.admin-class-delete {}
+@import "../../../assets/scss/abstract/mixins";
+@import "../../../assets/scss/abstract/variables";
+
+.admin-class-delete {
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__container-class {
+        margin-bottom: 2rem;
+    }
+
+    &__container-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        @include respond("sm") {
+            flex-direction: column;
+        }
+    }
+
+    &__container-allert {
+        padding: 2rem;
+        border: 1px solid $redError;
+        border-radius: 5px;
+    }
+
+    &__allert {
+        color: $redError;
+        font-weight: 700;
+    }
+
+    &__link {
+        text-align: center;
+    }
+}

@@ -48,10 +48,6 @@ const AdminLogin = () => {
         }
 
         setIsFormSubmitted(true);
-
-        // TEST
-        console.log(email);
-        console.log(password);
     }
 
     return (

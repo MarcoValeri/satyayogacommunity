@@ -5,12 +5,14 @@ import { db } from "../../../firebaseConfig";
 import AdminMenu from "../../components/AdminMenu/AdminMenu";
 
 import "./AdminClassDelete.scss";
+import { Link } from "react-router-dom";
 
 const AdminClassDelete = () => {
     const { classId } = useParams();
     const navigate = useNavigate();
 
     const [isLoading, setIsLoading] = useState(true);
+    const [flagDelete, setFlagDelete] = useState(false);
     const [deleteClass, setDeleteClass] = useState({
         title: '',
         date: '',
@@ -29,18 +31,20 @@ const AdminClassDelete = () => {
             if (doc.exists()) {
                 setDeleteClass(doc.data());
                 setIsLoading(false);
-                console.log(deleteClass);
             }
         });
 
         return () => unsubscribe();
     }, [classId]);
 
+    const handleCLickConfirmDelete = () => {
+        setFlagDelete(true);
+    }
+
     const handleClickDelete = async () => {
         try {
             const classRef = doc(db, 'Classes', classId);
             await deleteDoc(classRef);
-            console.log(`Class deleted successfully`);
             navigate('/admin/classes');
         } catch (error) {
             console.log(`Error deleting class: ${error}`);
@@ -51,8 +55,8 @@ const AdminClassDelete = () => {
         return (
             <AdminMenu>
                 <div className="admin-class-delete">
-                    <h2>Delete this class</h2>
-                    <p>Loading....</p>
+                    <h2 className="h2">Delete this class</h2>
+                    <p className="p">Loading....</p>
                 </div>
             </AdminMenu>
         )
@@ -61,11 +65,34 @@ const AdminClassDelete = () => {
     return (
         <AdminMenu>
             <div className="admin-class-delete">
-                <h2>Delete this class</h2>
-                <div>
-                    <p>{deleteClass.title}</p>
+                <h2 className="admin-class-delete__title h2">Delete this class</h2>
+                <div className="admin-class-delete__container-class">
+                    <h3 className="admin-class-delete__title h3">Do you want to delete this class?</h3>
+                    <p className="p">Class title: {deleteClass.title}</p>
+                    <p className="p">Class date: {deleteClass.date}</p>
+                    <p className="p">Class teacher: {deleteClass.teacher}</p>
+                    <p className="p">Class location: {deleteClass.location}</p>
                 </div>
-                <button className="button button__red" onClick={handleClickDelete}>Delete</button>
+                {flagDelete ? (    
+                    <div>
+                        <div className="admin-class-delete__container-buttons">
+                            <Link className="admin-class-delete__link button button__red" to="/admin/classes">Back to classes</Link>
+                            <button className="button button__red" onClick={handleClickDelete}>Delete this class forever</button>
+                        </div>
+                        <div className="admin-class-delete__container-allert">
+                            <h4 className="admin-class-delete__allert h4">*** This class and all its data will be removed ***</h4>
+                        </div>
+                    </div>
+                    )
+                    :
+                    (
+                    <div>
+                        <div className="admin-class-delete__container-buttons">
+                            <button className="button button__red" onClick={handleCLickConfirmDelete}>Yes, delete it</button>
+                            <Link className="admin-class-delete__link button button__red" to="/admin/classes">Back to classes</Link>
+                        </div>
+                    </div>
+                )}
             </div>
         </AdminMenu>
     )
