@@ -35,18 +35,23 @@ const Home = () => {
                         date="Tuesday 23 July 2024"
                         time="6:30 - 7:45pm"
                         address="Church on the Corner, N1"
+                        button="BOOK"
                     />
                     <CardClass
                         title="Vinysa Open Level"
                         date="Tuesday 23 July 2024"
                         time="6:30 - 7:45pm"
                         address="Church on the Corner, N1"
+                        buttonLink="https://www.google.com"
+                        button="BOOK"
                     />
                     <CardClass
                         title="Vinysa Open Level"
                         date="Tuesday 23 July 2024"
                         time="6:30 - 7:45pm"
                         address="Church on the Corner, N1"
+                        buttonLink="https://www.google.com"
+                        button="BOOK"
                     />
                 </div>
                 <div className="home__main-container-buttons">

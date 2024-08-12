@@ -1,7 +1,6 @@
 import { FaRegCircle } from "react-icons/fa";
 
 import "./CardClass.scss";
-import ButtonBook from "../ButtonBook/ButtonBook";
 
 const CardClass = props => {
     return (
@@ -20,7 +19,7 @@ const CardClass = props => {
                 <p className="p">{props.address}</p>
             </div>
             <div className="card-class__container-button">
-                <ButtonBook content="BOOK" />
+                <a className="button-book link-no-style" href={props.buttonLink} target="_blank">{props.button}</a>
             </div>
         </div>
     )

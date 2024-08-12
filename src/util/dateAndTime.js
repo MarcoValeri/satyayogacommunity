@@ -1,3 +1,5 @@
+const dayOfTheWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
 export const setCurrentDateAndTime = () => {
     const date = new Date();
     const day = date.getDate();
@@ -13,5 +15,20 @@ export const setCurrentDateAndTime = () => {
 
 export const formatDateAndTime = getDateAndTime => {
     const output = getDateAndTime.replace('T', ' - ');
+    return output;
+}
+
+export const formatTime = getDateAndTime => {
+    const output = getDateAndTime.substr(11);
+    return output;
+}
+
+export const formatDate = getDateAndTime => {
+    const date = new Date(getDateAndTime);
+    const weekDay = date.getUTCDay();
+    const day = date.getDate();
+    const month = date.getMonth();
+
+    const output = `${dayOfTheWeek[weekDay]} ${day}/${month + 1}`;
     return output;
 }

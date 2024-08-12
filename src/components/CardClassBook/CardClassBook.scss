@@ -1,22 +1,134 @@
+@import "../../assets/scss/abstract/mixins";
+@import "../../assets/scss/abstract/variables";
+
 .card-class-book {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 2rem;
-    border: 1px solid #d00;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 4px solid $redYoga;
+
+    @include respond("md") {
+        padding: 2rem 2rem 2rem .5rem;
+    }
+
+    @include respond("xs") {
+        flex-direction: column;
+    }
 
     &__container-info {
         width: 20%;
-        border: 1px solid #00d;
+        border-right: 2px solid $black;
+
+        @include respond("lg") {
+            width: 30%;
+        }
+
+        @include respond("xs") {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1rem;
+            border-right: none;
+        }
+    }
+
+    &__date {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        @include respond("md") {
+            font-size: 2rem;
+        }
+
+        @include respond("sm") {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__time {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        @include respond("md") {
+            font-size: 2rem;
+        }
+
+        @include respond("sm") {
+            font-size: 1.5rem;
+        }
     }
 
     &__container-data {
         width: 50%;
-        border: 1px solid #00d;
+        padding-left: 1rem;
+        
+        @include respond("xs") {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        @include respond("md") {
+            font-size: 2rem;
+        }
+
+        @include respond("sm") {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__teacher {
+        font-size: 2rem;
+
+        @include respond("md") {
+            font-size: 1.5rem;
+        }
+
+        @include respond("sm") {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__location {
+        font-size: 2rem;
+
+        @include respond("md") {
+            font-size: 1.5rem;
+        }
+
+        @include respond("sm") {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__map-icon {
+        font-size: 2rem;
+        color: $redYoga;
+
+        @include respond("md") {
+            font-size: 1.5rem;
+        }
+
+        @include respond("sm") {
+            font-size: 1.2rem;
+        }
     }
 
     &__container-book {
-        width: 10%;
-        border: 1px solid #00d;
+        width: 20%;
+        
+        @include respond("xs") {
+            width: 100%;
+            text-align: center;
+        }
     }
 }
