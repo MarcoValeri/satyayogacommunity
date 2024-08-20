@@ -12,7 +12,7 @@ const About = () => {
             <Header title="ABOUT US" />
             <TitleMoving title="More than just a yoga studio, a community hub" />
             <div className="about">
-                <h1 className="h1">WORKING IN PROGRESS...</h1>
+                <h1 className="h1">WORK IN PROGRESS...</h1>
             </div>
             <Footer />
         </>

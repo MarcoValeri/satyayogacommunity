@@ -17,7 +17,7 @@ const Footer = () => {
                         <img className="footer__logo" src={SatyaYogaCommunityLogo} alt="Satya Yoga Community logo, a white elephant with a red sun in the background" />
                     </div>
                     <div className="footer__container-credit-content">
-                        <p className="footer__content p-sm">For more information, please email us:</p>
+                        <p className="footer__content p-sm">For more information, email us:</p>
                         <p className="footer__content p-sm"><a className="footer__link link-no-style" href="mailto:hello@satyayogacommunity.com">hello@satyayogacommunity.com</a></p>
                         <p className="footer__content p-sm">&copy; {getYear} - SATYA YOGA</p>
                     </div>

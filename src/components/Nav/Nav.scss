@@ -37,6 +37,7 @@
 
     &__link {
         color: $black;
+        text-transform: uppercase;
     }
 
     &__container-social {
@@ -49,6 +50,10 @@
 
     &__social-icon {
         font-size: 3rem;
+    }
+
+    &__social-icon--mobile {
+        margin-right: 3rem;
     }
 
     &__container-lines {

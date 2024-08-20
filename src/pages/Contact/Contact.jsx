@@ -10,7 +10,7 @@ const Contact = () => {
             <Nav />
             <Header title="CONTACT US" />
             <div className="contact">
-                <h1 className="h1">WORKING IN PROGRESS...</h1>
+                <h1 className="h1">WORK IN PROGRESS...</h1>
             </div>
             <Footer />
         </>
