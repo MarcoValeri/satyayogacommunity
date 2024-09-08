@@ -18,9 +18,7 @@ const Classes = () => {
             try {
                 const classData = await dbGetClassesOrderByDate();
                 setClasses(classData);
-
-                // const classNewData = await dbGetClassesOrderFromToday();
-                // setClasses(classNewData);
+                
             } catch (err) {
                 setError(err);
                 console.log(`Error fetching classes: ${err}`);
@@ -31,6 +29,13 @@ const Classes = () => {
 
         fetchClasses();
     }, []);
+
+    classes.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateA - dateB;
+    });
+
 
     if (loading) {
         return (
@@ -75,7 +80,11 @@ const Classes = () => {
                     <p className="classes__content p">Classes are open to all levels and the teacher offers modifications to serve all students.</p>
                 </div>
                 <div className="classes__container-classes">
-                    {classes.map((singleClass, index) => {
+                    {classes.filter((singleClass) => {
+                          const classDateTime = new Date(singleClass.date);
+                          const currentDateTime = new Date();
+                          return classDateTime > currentDateTime;
+                    }).map((singleClass, index) => {
                         return (
                             <div key={index} className="classes__container-class">
                                 <CardClassBook
