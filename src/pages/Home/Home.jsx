@@ -7,7 +7,8 @@ import Footer from "../../components/Footer/Footer";
 
 import "./Home.scss";
 
-import SatyaYogaCommunityImage from "../../images/satya-yoga-community.webp";
+import SatyaYogaClass from "../../images/satya-yoga-class.webp";
+import VictoriaTeacherAssisting from "../../images/victoria-teacher-assisting.webp";
 import Community from "../../components/Community/Community";
 
 const Home = () => {
@@ -15,14 +16,17 @@ const Home = () => {
         <div className="home">
             <Nav />
             <div className="home__header">
-                <img className="home__header-image" src={SatyaYogaCommunityImage} alt="Yoga class on a beach" />
                 <div className="home__header-container-title">
                     <h1 className="home__header-title">SATYA YOGA</h1>
                     <h2 className="home__header-sub-title h2">JOIN THE COMMUNITY</h2>
-                    <ButtonSquare
-                        url="/about"
-                        content="ABOUT US"
-                    />
+                </div>
+                <div className="home__header-container-images">
+                    <div className="home__header-container-image-one">
+                        <img className="home__header-image-one" src={SatyaYogaClass} alt="Satya Yoga Class" />
+                    </div>
+                    <div className="home__header-container-image-two">
+                        <img className="home__header-image-two" src={VictoriaTeacherAssisting} alt="Victoria teachear assisting" />
+                    </div>
                 </div>
             </div>
             <main className="home__main">

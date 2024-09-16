@@ -5,53 +5,83 @@
     &__header {
         position: relative;
         height: 80vh;
-    }
+        display: flex;
+        background-color: $pinkCommunityLight;
 
-    &__header-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: .5;
+        @include respond("lg") {
+            height: 60vh;
+        }
     }
 
     &__header-container-title {
-        position: absolute;
-        width: 80%;
-        top: 0%;
-        left: 50%;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         text-align: center;
-        transform: translate(-50%, 10%);
 
-        @include respond("md") {
+        @include respond("lg") {
             width: 100%;
-            top: 10%;
         }
-
     }
 
     &__header-title {
         font-size: 12rem;
         color: $redYoga;
-        margin-bottom: 8rem;
-
-        @include respond("xxl") {
-            margin-bottom: 6rem;
-        }
+        margin-bottom: 2rem;
 
         @include respond("md") {
             font-size: 8rem;
-            margin-bottom: 5rem;
         }
 
     }
 
     &__header-sub-title {
         color: $redYoga;
-        margin-bottom: 10rem;
+    }
 
-        @include respond("xxl") {
-            margin-bottom: 5rem;
+    &__header-container-images {
+        width: 30%;
+        position: relative;
+
+        @include respond("lg") {
+            display: none;
         }
+    }
+
+    &__header-container-image-one {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 35rem;
+        height: 35rem;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 25%;
+    }
+
+    &__header-image-one {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__header-container-image-two {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        width: 25rem;
+        height: 25rem;
+        z-index: 2;
+        overflow: hidden;
+        border-radius: 25%;
+    }
+
+    &__header-image-two {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     &__main {
