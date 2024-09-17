@@ -4,7 +4,7 @@
 .founders {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
 
     &__container-background-pink {
         position: absolute;
@@ -12,7 +12,7 @@
         height: 80%;
         top: 0;
         left: 0;
-        background-color: $pinkYoga;
+        background-color: $pinkCommunityLight;
     }
 
     &__container-background-white {
@@ -39,7 +39,7 @@
     }
 
     &__container-content-title {
-        color: $white;
+        color: $redYoga;
         margin-bottom: 5rem;
     }
 
@@ -50,16 +50,17 @@
     &__container-content-info {
         position: relative;
         width: 100%;
-        height: 50vh;
-        overflow: hidden;
+        height: 70vh;
+        // overflow: hidden;
     }
 
     &__container-content-info-image {
         position: absolute;
-        width: 50%;
+        width: 60%;
         height: 100%;
         top: 50%;
         left: 50%;
+        text-align: center;
         transform: translate(-50%, -50%);
 
         @include respond("xxl") {
@@ -68,26 +69,38 @@
     }
 
     &__content-image {
-        width: 100%;
+        width: auto;
         height: 100%;
+        object-fit: contain;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        @include respond("md") {
+            width: 90%;
+            height: auto;
+        }
     }
 
     &__container-content-info-card {
         position: absolute;
-        width: 40%;
+        width: 50%;
         left: 50%;
-        bottom: 0%;
+        bottom: -5%;
+        text-align: center;
         transform: translate(-50%, 0%);
         padding: 1rem 2rem;
-        background-color: $pinkYoga;
-        border-bottom: 5px solid $redYoga;
+        background-color: $white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-        @include respond("xxl") {
-            width: 60%;
-        }
+        // @include respond("xxl") {
+        //     width: 60%;
+        // }
 
         @include respond("lg") {
             width: 80%;
+        }
+
+        @include respond("sm") {
+            bottom: 20%;
         }
     }
 

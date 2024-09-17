@@ -23,6 +23,10 @@
 // Content
 .h1 {
     font-size: 5rem;
+
+    @include respond("sm") {
+        font-size: 4rem;
+    }
 }
 
 .h2 {
@@ -67,6 +71,12 @@
 // Link
 .link-no-style {
     text-decoration: none;
+}
+
+.link-red {
+    text-decoration: underline;
+    color: $redYoga;
+    font-weight: 700;
 }
 
 // List ul and ol

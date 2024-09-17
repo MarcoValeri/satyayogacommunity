@@ -3,10 +3,12 @@ import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 
 import "./Community.scss";
 
-import SatyaYogaCollage from "../../images/satya-yoga-collage.webp";
-import SatyaYogaCommunity from "../../images/satya-yoga-community.webp";
-import SatyaYogaFounders from "../../images/satya-yoga-founders.webp";
-import YogaOnTheBeach from "../../images/yoga-on-the-beach.webp";
+import SatyaYogaGroupClass from "../../images/satya-yoga-group-class.webp";
+import SatyaYogaVittoriaAssisting from "../../images/vittoria-assisting.webp";
+import SatyaYogaCaterinaClass from "../../images/caterina-during-a-class.webp";
+import SatyaYogaClassGroup from "../../images/satya-yoga-class-group.jpg";
+import SatyaYogaClassTeaching from "../../images/satya-yoga-teaching.jpg";
+import SatyaYogaClassCommunity from "../../images/satya-yoga-class-community.webp";
 
 const Community = () => {
 
@@ -51,12 +53,12 @@ const Community = () => {
     }
 
     const carouselArr = [
-        [SatyaYogaCollage, 'Satya Yoga Community collage with memebers and students'],
-        [SatyaYogaCommunity, 'Satya Yoga Community people after class'],
-        [SatyaYogaFounders, 'Satya Yoga Community founders'],
-        [YogaOnTheBeach, 'Satya Yoga Community on the beach'],
-        [SatyaYogaCollage, 'Satya Yoga Community collage with memebers and students'],
-        [SatyaYogaCommunity, 'Satya Yoga Community people after class']
+        [SatyaYogaGroupClass, 'Satya Yoga Group Class'],
+        [SatyaYogaVittoriaAssisting, 'Satya Yoga Vittoria assisting'],
+        [SatyaYogaCaterinaClass, 'Satya Yoga Community founders'],
+        [SatyaYogaClassGroup, 'Satya Yoga Community Group'],
+        [SatyaYogaClassTeaching, 'Satya Yoga Community Teaching'],
+        [SatyaYogaClassCommunity, 'Satya Yoga Community people after class']
     ];
 
     return (

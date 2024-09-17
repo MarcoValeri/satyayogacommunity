@@ -59,10 +59,10 @@
         left: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
         grid-template-areas:
                             "community__container-single-image-1 community__container-single-image-2 community__container-single-image-3"
                             "community__container-single-image-4 community__container-single-image-5 community__container-single-image-6";
-        overflow: hidden;
         z-index: 1;
 
         @include respond("lg") {
@@ -70,6 +70,7 @@
             height: 80%;
             top: 0%;
             display: block;
+            overflow: hidden;
         }
 
         @include respond("md") {
@@ -105,6 +106,9 @@
     &__container-single-image {
         width: 100%;
         height: auto;
+        overflow: hidden;
+        border-radius: 15%;
+        box-shadow: 10px 10px 5px $pinkCommunityLight;
 
         @include respond("lg") {
             height: 100%;
@@ -122,6 +126,7 @@
     &__image {
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 
     &__container-content-wording {
