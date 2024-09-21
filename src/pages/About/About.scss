@@ -1,3 +1,47 @@
+@import "../../assets/scss/abstract/mixins";
+
 .about {
-    text-align: center;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 5rem;
+        grid-template-areas: "about__container-content about__container-offering";
+        padding: 0 5rem;
+        margin-bottom: 5rem;
+
+        @include respond("md") {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                                "about__container-content"
+                                "about__container-offering";
+            column-gap: 0;
+            row-gap: 5rem;
+            padding: 0 2rem;
+        }
+    }
+
+    &__container-content {
+        grid-area: about__container-content;
+    }
+
+    &__content {
+        margin-bottom: 2rem;
+    }
+
+    &__container-offering {
+        grid-area: about__container-offering;
+    }
+
+    &__container-image {
+        width: 100%;
+        height: 30rem;
+        margin-bottom: 10rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

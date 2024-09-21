@@ -1,29 +1,20 @@
 @import "../../assets/scss/abstract/mixins";
-@import "../../assets/scss/abstract/variables";
 
-.contact {
+.our-projects {
     margin-bottom: 10rem;
 
     &__container-content {
         padding: 0 10rem;
 
         @include respond("md") {
-            padding: 0 2rem;
+            padding: 2rem;
         }
     }
 
-    &__container-content-title {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
     &__title {
-        margin-bottom: 1rem;
-    }
-
-    &__heart {
-        font-size: 10rem;
-        color: $redYoga;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 2rem;
     }
 
     &__content {

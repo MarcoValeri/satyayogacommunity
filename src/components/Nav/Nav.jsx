@@ -24,9 +24,9 @@ const Nav = () => {
             </div>
             <div className="nav__container-links">
                 <ul className="list-no-disk">
-                    <li className="nav__menu-link p-md"><Link to="/" className="nav__link link-no-style" rel="noopener noreferrer">Home</Link></li>
                     <li className="nav__menu-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About Us</Link></li>
                     <li className="nav__menu-link p-md"><Link to="/classes" className="nav__link link-no-style" rel="noopener noreferrer">Classes</Link></li>
+                    <li className="nav__menu-link p-md"><Link to="/our-projects" className="nav__link link-no-style" rel="noopener noreferrer">Our Projects</Link></li>
                     <li className="nav__menu-link p-md"><Link to="/contact" className="nav__link link-no-style" rel="noopener noreferrer">Contact Us</Link></li>
                 </ul>
             </div>

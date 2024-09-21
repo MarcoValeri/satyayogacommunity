@@ -16,6 +16,7 @@ import { AuthProvider } from "./hooks/AuthContext";
 
 import "./assets/scss/main.scss";
 import AdminClassDelete from "./admin/pages/AdminClassDelete/AdminClassDelete";
+import OurProjects from "./pages/OurProjects/OurProjects";
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
                         <Route exact path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/classes" element={<Classes />} />
+                        <Route path="/our-projects" element={<OurProjects />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/login" element={<AdminLogin />} />
                         <Route path="/admin" element={<ProtectedRoute><Outlet /></ProtectedRoute>} >
