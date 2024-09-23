@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { dbGetClassesOrderByDate } from "../../db/dbGetClasses";
 import ButtonSquare from "../../components/ButtonSquare/ButtonSquare";
 import Nav from "../../components/Nav/Nav";
 import CardClass from "../../components/CardClass/CardClass";
@@ -12,6 +14,32 @@ import VictoriaTeacherAssisting from "../../images/victoria-teacher-assisting.we
 import Community from "../../components/Community/Community";
 
 const Home = () => {
+
+    const [classes, setClasses] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchClasses = async () => {
+            try {
+                const classData = await dbGetClassesOrderByDate();
+                setClasses(classData);
+            } catch (err) {
+                setError(err);
+                console.log(`Error fetching classes: ${err}`);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchClasses();
+    }, []);
+
+    classes.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateA - dateB;
+    })
+
     return (
         <div className="home">
             <Nav />
@@ -34,29 +62,27 @@ const Home = () => {
                     <h3 className="home__main-title h1">PRACTICE WITH US</h3>
                 </div>
                 <div className="home__main-container-classes">
-                    <CardClass
-                        title="Vinysa Open Level"
-                        date="Tuesday 23 July 2024"
-                        time="6:30 - 7:45pm"
-                        address="Church on the Corner, N1"
-                        button="BOOK"
-                    />
-                    <CardClass
-                        title="Vinysa Open Level"
-                        date="Tuesday 23 July 2024"
-                        time="6:30 - 7:45pm"
-                        address="Church on the Corner, N1"
-                        buttonLink="https://www.google.com"
-                        button="BOOK"
-                    />
-                    <CardClass
-                        title="Vinysa Open Level"
-                        date="Tuesday 23 July 2024"
-                        time="6:30 - 7:45pm"
-                        address="Church on the Corner, N1"
-                        buttonLink="https://www.google.com"
-                        button="BOOK"
-                    />
+                    {classes.filter((singleClass) => {
+                          const classDateTime = new Date(singleClass.date);
+                          const currentDateTime = new Date();
+                          return classDateTime > currentDateTime;
+                    }).map((singleClass, index) => {
+                        if (index < 3) {
+                            return (
+                                <div key={index} className="classes__container-class">
+                                    <CardClass
+                                        key={index}
+                                        title={singleClass.title}
+                                        date={singleClass.date}
+                                        time={singleClass.date}
+                                        address={singleClass.location}
+                                        buttonLink={singleClass.booking}
+                                        button="BOOK"
+                                    />
+                                </div>
+                            )
+                        }
+                    })}
                 </div>
                 <div className="home__main-container-buttons">
                     <ButtonSquare
@@ -64,8 +90,8 @@ const Home = () => {
                         content="CLASSES"
                     />
                     <ButtonSquare
-                        url="/"
-                        content="WORKSHOPS"
+                        url="/our-projects"
+                        content="OUR PROJECTS"
                     />
                 </div>
             </main>

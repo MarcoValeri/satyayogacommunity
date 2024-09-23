@@ -1,3 +1,5 @@
+import { formatTime, formatDate, formatLongDate } from "../../util/dateAndTime";
+
 import { FaRegCircle } from "react-icons/fa";
 
 import "./CardClass.scss";
@@ -12,8 +14,8 @@ const CardClass = props => {
                 <h2 className="card-class__title h4">{props.title}</h2>
             </div>
             <div className="card-class__container-date">
-                <p className="p">{props.date}</p>
-                <p className="p">{props.time}</p>
+                <p className="p">{formatLongDate(props.date)}</p>
+                <p className="p">{formatTime(props.time)}</p>
             </div>
             <div className="card-class__container-address">
                 <p className="p">{props.address}</p>

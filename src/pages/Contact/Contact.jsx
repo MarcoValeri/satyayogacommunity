@@ -21,6 +21,7 @@ const Contact = () => {
                     <p className="contact__content p">We're here to support you on your yoga path.</p>
                     <p className="contact__content p">Contact us with any questions, or simply to say hello. We look forward to connecting with you.</p>
                     <p className="contact__content p"><strong>Email:</strong> <a href="mailto:hello@satyayogacommunity.com">hello@satyayogacommunity.com</a></p>
+                    <p className="contact__content p"><strong>Follow us on Instagram:</strong> <a href="https://www.instagram.com/Satyayogacommunity/">satyayogacommunity</a></p>
                 </div>
             </div>
             <Footer />
