@@ -15,7 +15,7 @@ const CardClass = props => {
             </div>
             <div className="card-class__container-date">
                 <p className="p">{formatLongDate(props.date)}</p>
-                <p className="p">{formatTime(props.time)}</p>
+                <p className="p">{formatTime(props.time)} - {props.duration}</p>
             </div>
             <div className="card-class__container-address">
                 <p className="p">{props.address}</p>

@@ -10,6 +10,8 @@ const dayOfTheWeekFull = [
     'Sunday'
 ];
 
+const monthOfTheYear = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+
 export const setCurrentDateAndTime = () => {
     const date = new Date();
     const day = date.getDate();
@@ -39,7 +41,7 @@ export const formatDate = getDateAndTime => {
     const day = date.getDate();
     const month = date.getMonth();
 
-    const output = `${dayOfTheWeek[weekDay]} ${day}/${month + 1}`;
+    const output = `${dayOfTheWeek[weekDay]} ${day}/${monthOfTheYear[month]}`;
     return output;
 }
 
@@ -50,6 +52,6 @@ export const formatLongDate = getDateAndTime => {
     const month = date.getMonth();
     const year = date.getFullYear();
 
-    const output = `${dayOfTheWeekFull[weekDay]} ${day}/${month}/${year}`;
+    const output = `${dayOfTheWeekFull[weekDay]} ${day}/${monthOfTheYear[month]}/${year}`;
     return output;
 }

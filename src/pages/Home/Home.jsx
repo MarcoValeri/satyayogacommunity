@@ -74,6 +74,7 @@ const Home = () => {
                                     title={singleClass.title}
                                     date={singleClass.date}
                                     time={singleClass.date}
+                                    duration={singleClass.duration}
                                     address={singleClass.location}
                                     buttonLink={singleClass.booking}
                                     button="BOOK"
