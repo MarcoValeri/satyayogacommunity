@@ -27,10 +27,11 @@ const About = () => {
                     <div className="about__container-offering">
                         <p className="about__content p">OFFERINGS</p>
                         <ul className="list">
-                            <li className="list-item">Community classes</li>
-                            <li className="list-item">Vinyasa classes</li>
+                            <li className="list-item">Community Classes</li>
+                            <li className="list-item">Dynamic Vinyasa</li>
+                            <li className="list-item">Flow & Restore</li>
                             <li className="list-item">Workshops</li>
-                            <li className="list-item">Private classes</li>
+                            <li className="list-item">Private Classes</li>
                         </ul>
                     </div>
                 </div>
