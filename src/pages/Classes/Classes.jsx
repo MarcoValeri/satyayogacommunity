@@ -69,16 +69,6 @@ const Classes = () => {
             <Header title="CLASSES" />
             <TitleMoving title="Satya Yoga offers accessible high quality yoga" />
             <div className="classes">
-                <div className="classes__container-content">
-                    <h3 className="classes__content p"><strong>Community Classes</strong></h3>
-                    <p className="classes__content p">These are weekly open level vinyasa classes taught by triyoga graduates, who have strong bases of anatomy and alignment, ensuring quality and safety, while bringing their own unique skills to the mat.</p>
-                    <p className="classes__content p">After class, we like to continue building the community, sharing a bite and a drink. Join us and connect with like-minded individuals!</p>
-                    <p className="classes__content p">The classes are donation-based. Your support helps cover costs and ensures fair compensation for our teachers.</p>
-                    <h3 className="classes__content p"><strong>Regular Vinyasa Open Level</strong></h3>
-                    <p className="classes__content p">Vinyasa is Sanskrit for “to place with special attention” and it refers to a practice designed to cultivate concentration and awareness. In Vinyasa yoga, the student is invited to move through poses, while focusing on alignment and breath.</p>
-                    <p className="classes__content p">For yogis who like to deepen the practice through the consistency of a teacher’s style, Cat and Vic offer a regular schedule to flow with them every week, including community classes at triyoga in September ‘24 and January ‘25. (here we could be more specific when we have the info)</p>
-                    <p className="classes__content p">Classes are open to all levels and the teacher offers modifications to serve all students.</p>
-                </div>
                 <div className="classes__container-classes">
                     {classes.filter((singleClass) => {
                           const classDateTime = new Date(singleClass.date);
@@ -102,6 +92,16 @@ const Classes = () => {
                         )
                     })}
                 </div>
+                {/* <div className="classes__container-content">
+                    <h3 className="classes__content p"><strong>Community Classes</strong></h3>
+                    <p className="classes__content p">These are weekly open level vinyasa classes taught by triyoga graduates, who have strong bases of anatomy and alignment, ensuring quality and safety, while bringing their own unique skills to the mat.</p>
+                    <p className="classes__content p">After class, we like to continue building the community, sharing a bite and a drink. Join us and connect with like-minded individuals!</p>
+                    <p className="classes__content p">The classes are donation-based. Your support helps cover costs and ensures fair compensation for our teachers.</p>
+                    <h3 className="classes__content p"><strong>Regular Vinyasa Open Level</strong></h3>
+                    <p className="classes__content p">Vinyasa is Sanskrit for “to place with special attention” and it refers to a practice designed to cultivate concentration and awareness. In Vinyasa yoga, the student is invited to move through poses, while focusing on alignment and breath.</p>
+                    <p className="classes__content p">For yogis who like to deepen the practice through the consistency of a teacher’s style, Cat and Vic offer a regular schedule to flow with them every week, including community classes at triyoga in September ‘24 and January ‘25. (here we could be more specific when we have the info)</p>
+                    <p className="classes__content p">Classes are open to all levels and the teacher offers modifications to serve all students.</p>
+                </div> */}
             </div>
             <Footer />
         </>

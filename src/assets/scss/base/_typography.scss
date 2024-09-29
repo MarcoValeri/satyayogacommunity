@@ -20,6 +20,40 @@
     }
 }
 
+.button-book-red {
+    font-size: 2rem;
+    color: $white;
+    background-color: $redYoga;
+    padding: 1.5rem 2rem;
+    border: 1px solid $redYoga;
+    border-radius: 20px;
+    transition: all .2s;
+    cursor: pointer;
+
+    @include respond("lg") {
+        font-size: 2.5rem;
+    }
+
+    @include respond("md") {
+        font-size: 2rem;
+    }
+
+    @include respond("sm") {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    @include respond("xs") {
+        font-size: 1rem;
+    }
+
+    &:hover {
+        color: $redYoga;
+        background-color: $white;
+        border: 1px solid $redYoga;
+    }
+}
+
 // Content
 .h1 {
     font-size: 5rem;

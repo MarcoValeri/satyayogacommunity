@@ -3,7 +3,7 @@
 
 .card-class {
     width: 25rem;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     background-image: linear-gradient(
         to right bottom,
         rgba(255, 255, 255, 0.836),
@@ -13,16 +13,15 @@
     border-bottom: 4px solid $redYoga;
 
     @include respond("md") {
-        width: 100%;   
+        width: 100%;
     }
 
     &__container-logo {
-        padding: 1rem 0;
+        text-align: center;
     }
 
     &__logo {
-        font-size: 3rem;
-        color: $redYoga;
+        width: 8rem;
     }
 
     &__container-title {
@@ -30,11 +29,8 @@
     }
 
     &__title {
+        text-align: center;
         text-transform: uppercase;
-
-        @include respond("md") {
-            text-align: center;   
-        }
     }
 
     &__container-date {
@@ -45,6 +41,7 @@
     &__container-address {
         text-align: center;
         padding: 1rem 0;
+        margin-bottom: 2rem;
     }
 
     &__container-button {

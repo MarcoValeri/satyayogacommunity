@@ -6,7 +6,7 @@
     overflow: hidden;
 
     &__container-title {
-        width: 2200rem;
+        width: 2210rem;
         display: flex;
         overflow: hidden;
     }
@@ -14,7 +14,7 @@
     &__title {
         color: $redYoga;
         margin: 0 50rem;
-        animation: slide 120s linear infinite;
+        animation: slide 60s linear infinite;
 
         @include respond("xl") {
             margin: 0 40rem;

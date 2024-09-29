@@ -69,17 +69,15 @@ const Home = () => {
                     }).map((singleClass, index) => {
                         if (index < 3) {
                             return (
-                                <div key={index} className="classes__container-class">
-                                    <CardClass
-                                        key={index}
-                                        title={singleClass.title}
-                                        date={singleClass.date}
-                                        time={singleClass.date}
-                                        address={singleClass.location}
-                                        buttonLink={singleClass.booking}
-                                        button="BOOK"
-                                    />
-                                </div>
+                                <CardClass
+                                    key={index}
+                                    title={singleClass.title}
+                                    date={singleClass.date}
+                                    time={singleClass.date}
+                                    address={singleClass.location}
+                                    buttonLink={singleClass.booking}
+                                    button="BOOK"
+                                />
                             )
                         }
                     })}

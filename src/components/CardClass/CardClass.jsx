@@ -1,14 +1,14 @@
-import { formatTime, formatDate, formatLongDate } from "../../util/dateAndTime";
-
-import { FaRegCircle } from "react-icons/fa";
+import { formatTime, formatLongDate } from "../../util/dateAndTime";
 
 import "./CardClass.scss";
+
+import LotusFlowersRedSmall from "../../images/lotus-flowers-red-yoga-small.png"
 
 const CardClass = props => {
     return (
         <div className="card-class">
             <div className="card-class__container-logo">
-                <FaRegCircle className="card-class__logo" />
+                <img className="card-class__logo" src={LotusFlowersRedSmall} alt="Flowers Lotus Red" />
             </div>
             <div className="card-class__container-title">
                 <h2 className="card-class__title h4">{props.title}</h2>
@@ -21,7 +21,7 @@ const CardClass = props => {
                 <p className="p">{props.address}</p>
             </div>
             <div className="card-class__container-button">
-                <a className="button-book link-no-style" href={props.buttonLink} target="_blank">{props.button}</a>
+                <a className="button-book-red link-no-style" href={props.buttonLink} target="_blank">{props.button}</a>
             </div>
         </div>
     )
