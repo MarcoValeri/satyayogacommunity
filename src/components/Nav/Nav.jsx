@@ -24,10 +24,10 @@ const Nav = () => {
             </div>
             <div className="nav__container-links">
                 <ul className="list-no-disk">
-                    <li className="nav__menu-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About Us</Link></li>
+                    <li className="nav__menu-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About us</Link></li>
                     <li className="nav__menu-link p-md"><Link to="/classes" className="nav__link link-no-style" rel="noopener noreferrer">Classes</Link></li>
-                    <li className="nav__menu-link p-md"><Link to="/our-projects" className="nav__link link-no-style" rel="noopener noreferrer">Our Projects</Link></li>
-                    <li className="nav__menu-link p-md"><Link to="/contact" className="nav__link link-no-style" rel="noopener noreferrer">Contact Us</Link></li>
+                    <li className="nav__menu-link p-md"><Link to="/our-projects" className="nav__link link-no-style" rel="noopener noreferrer">Projects</Link></li>
+                    <li className="nav__menu-link p-md"><Link to="/contact" className="nav__link link-no-style" rel="noopener noreferrer">Contact us</Link></li>
                 </ul>
             </div>
             <div className="nav__container-social">
@@ -44,10 +44,10 @@ const Nav = () => {
             <div className={`nav__mobile-menu-container ${navMobileOpen && 'nav__mobile-menu-container--open'}`} onClick={handleOpenMobileMenuClick}>
                 <ul className="list-no-disk">
                     <li className="nav__mobile-menu-item p-xl"><Link to="/" className="nav__link link-no-style" rel="noopener noreferrer">Home</Link></li>
-                    <li className="nav__mobile-menu-item p-xl"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About Us</Link></li>
+                    <li className="nav__mobile-menu-item p-xl"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About us</Link></li>
                     <li className="nav__mobile-menu-item p-xl"><Link to="/classes" className="nav__link link-no-style" rel="noopener noreferrer">Classes</Link></li>
-                    <li className="nav__mobile-menu-item p-xl"><Link to="/our-projects" className="nav__link link-no-style" rel="noopener noreferrer">Our Projects</Link></li>
-                    <li className="nav__mobile-menu-item p-xl"><Link to="/contact" className="nav__link link-no-style" rel="noopener noreferrer">Contact Us</Link></li>
+                    <li className="nav__mobile-menu-item p-xl"><Link to="/our-projects" className="nav__link link-no-style" rel="noopener noreferrer">Projects</Link></li>
+                    <li className="nav__mobile-menu-item p-xl"><Link to="/contact" className="nav__link link-no-style" rel="noopener noreferrer">Contact us</Link></li>
                     <li className="nav__mobile-menu-item"><a className="footer__link link-no-style" href="https://www.instagram.com/Satyayogacommunity/" target="_blank"><FiInstagram className="nav__social-icon nav__social-icon--mobile" /></a> <a className="footer__link link-no-style" href="mailto:hello@satyayogacommunity.com"><TfiEmail className="nav__social-icon" /></a></li>
                 </ul>
             </div>

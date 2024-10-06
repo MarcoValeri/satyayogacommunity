@@ -46,7 +46,7 @@ const Home = () => {
             <div className="home__header">
                 <div className="home__header-container-title">
                     <h1 className="home__header-title">SATYA YOGA</h1>
-                    <h2 className="home__header-sub-title h2">JOIN THE COMMUNITY</h2>
+                    <h2 className="home__header-sub-title h1">Join our Community</h2>
                 </div>
                 <div className="home__header-container-images">
                     <div className="home__header-container-image-one">
@@ -59,7 +59,7 @@ const Home = () => {
             </div>
             <main className="home__main">
                 <div className="home__main-container-title">
-                    <h3 className="home__main-title h1">PRACTICE WITH US</h3>
+                    <h3 className="home__main-title h1">Practice with us</h3>
                 </div>
                 <div className="home__main-container-classes">
                     {classes.filter((singleClass) => {
@@ -86,11 +86,11 @@ const Home = () => {
                 <div className="home__main-container-buttons">
                     <ButtonSquare
                         url="/classes"
-                        content="CLASSES"
+                        content="Classes"
                     />
                     <ButtonSquare
                         url="/our-projects"
-                        content="OUR PROJECTS"
+                        content="Projects"
                     />
                 </div>
             </main>

@@ -78,7 +78,7 @@ const Community = () => {
                     }
                 </div>
                 <div className="community__container-content-wording">
-                    <h4 className="community__wording">OUR COMMUNITY</h4>
+                    <h4 className="community__wording">Our community</h4>
                 </div>
                 <div className="community__container-arrows">
                     <FaArrowLeftLong

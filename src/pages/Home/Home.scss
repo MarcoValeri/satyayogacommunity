@@ -44,6 +44,7 @@
     &__header-container-images {
         width: 30%;
         position: relative;
+        overflow: hidden;
 
         @include respond("lg") {
             display: none;
@@ -52,8 +53,8 @@
 
     &__header-container-image-one {
         position: absolute;
-        top: 10%;
-        left: 5%;
+        top: 15%;
+        left: 10%;
         width: 35rem;
         height: 35rem;
         z-index: 1;
@@ -69,7 +70,7 @@
 
     &__header-container-image-two {
         position: absolute;
-        top: 40%;
+        top: 50%;
         left: 0;
         width: 25rem;
         height: 25rem;

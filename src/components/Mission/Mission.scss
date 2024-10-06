@@ -23,7 +23,8 @@
         background-size: contain;
         background-position: bottom;
         background-repeat: no-repeat;
-        padding: 8rem 2rem 1rem 2rem;
+        padding: 6rem 2rem 3rem 2rem;
+        // padding: 8rem 2rem 1rem 2rem;
 
         @include respond("md") {
             width: auto;

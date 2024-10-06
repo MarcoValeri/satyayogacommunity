@@ -27,8 +27,8 @@ const Footer = () => {
             <div className="footer__nav">
                 <div className="footer__nav-container-links">
                     <ul className="footer__nav-menu list-no-disk">
-                        <li className="footer__nav-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About Us</Link></li>
-                        <li className="footer__nav-link p-md"><Link to="/contact" className="nav__link link-no-style" rel="noopener noreferrer">Contact Us</Link></li>
+                        <li className="footer__nav-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About us</Link></li>
+                        <li className="footer__nav-link p-md"><Link to="/contact" className="nav__link link-no-style" rel="noopener noreferrer">Contact us</Link></li>
                     </ul>
                 </div>
                 <div className="footer__nav-container-social">

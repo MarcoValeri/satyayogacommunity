@@ -11,7 +11,7 @@ const About = () => {
     return (
         <>
             <Nav />
-            <Header title="ABOUT US" />
+            <Header title="About us" />
             <TitleMoving title="More than just a yoga studio, a community hub" />
             <div className="about">
                 <div className="about__wrapper">
@@ -25,7 +25,7 @@ const About = () => {
                         <p className="about__content p">Join us on this journey.</p>
                     </div>
                     <div className="about__container-offering">
-                        <p className="about__content p">OFFERINGS</p>
+                        <p className="about__content p-lg"><strong>Offerings</strong></p>
                         <ul className="list">
                             <li className="list-item">Community Classes</li>
                             <li className="list-item">Dynamic Vinyasa</li>

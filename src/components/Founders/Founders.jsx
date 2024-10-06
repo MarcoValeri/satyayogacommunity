@@ -9,7 +9,7 @@ const Founders = () => {
             <div className="founders__container-background-white"></div>
             <div className="founders__container-content">
                 <div className="founders__container-content-title">
-                    <h2 className="founders__content-title h1">FOUNDERS</h2>
+                    <h2 className="founders__content-title h1">Founders</h2>
                 </div>
                 <div className="founders__container-content-info">
                     <div className="founders__container-content-info-image">

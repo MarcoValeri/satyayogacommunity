@@ -66,9 +66,12 @@ const Classes = () => {
     return (
         <>
             <Nav />
-            <Header title="CLASSES" />
+            <Header title="Classes" />
             <TitleMoving title="Satya Yoga offers accessible high quality yoga" />
             <div className="classes">
+                <div className="classes__container-title">
+                    <h3 className="p">Find your perfect class below! Click <strong>Book</strong> to read more and reserve your spot.<br/>Need help? Contact us at <a href="mailto:hello@satyayogacommunity.com">hello@satyayogacommunity.com</a></h3>
+                </div>
                 <div className="classes__container-classes">
                     {classes.filter((singleClass) => {
                           const classDateTime = new Date(singleClass.date);

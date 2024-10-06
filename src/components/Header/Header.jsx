@@ -6,7 +6,7 @@ const Header = props => {
     return (
         <div className="header">
             <div className="header__container-title" style={{backgroundImage: `url(${LotusFlower})`}}>
-                <h1 className="header__title h1">{props.title}</h1>
+                <h1 className="header__title">{props.title}</h1>
             </div>
         </div>
     )

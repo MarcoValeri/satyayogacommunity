@@ -3,6 +3,11 @@
 .classes {
     padding: 0 5rem;
 
+    &__container-title {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
     &__container-content {
         width: 70%;
         margin: 0 auto 10rem auto;
