@@ -1,0 +1,48 @@
+@import "../../assets/scss/abstract/variables";
+
+.loading-logo {
+    height: 40vh;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__container-loading {
+        width: 15rem;
+        height: 15rem;
+        margin: auto;
+        border-radius: 50%;
+        border: 16px solid $greyYoga;
+        border-top: 16px solid $redYoga;
+        border-bottom: 16px solid $redYoga;
+        animation: rotation 5s linear infinite;
+    }
+
+    &__container-logo {
+        position: absolute;
+        width: 10rem;
+        height: 12rem;
+        top: 62%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
