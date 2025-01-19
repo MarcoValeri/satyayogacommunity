@@ -55,11 +55,21 @@
         position: absolute;
         top: 15%;
         left: 10%;
-        width: 35rem;
-        height: 35rem;
+        width: 20vw;
+        height: 35vh;
         z-index: 1;
         overflow: hidden;
         border-radius: 25%;
+
+        @include respond("xxl") {
+            top: 20%;
+            height: 30vh;
+        }
+
+        @include respond("xl") {
+            top: 23%;
+            height: 28vh;
+        }
     }
 
     &__header-image-one {
@@ -72,8 +82,8 @@
         position: absolute;
         top: 50%;
         left: 0;
-        width: 25rem;
-        height: 25rem;
+        width: 15vw;
+        height: 15vw;
         z-index: 2;
         overflow: hidden;
         border-radius: 25%;
