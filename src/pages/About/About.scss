@@ -33,15 +33,4 @@
         grid-area: about__container-offering;
     }
 
-    &__container-image {
-        width: 100%;
-        height: 30rem;
-        margin-bottom: 10rem;
-    }
-
-    &__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 }

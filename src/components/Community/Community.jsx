@@ -3,12 +3,12 @@ import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 
 import "./Community.scss";
 
-import SatyaYogaGroupClass from "../../images/satya-yoga-group-class.webp";
-import SatyaYogaVittoriaAssisting from "../../images/vittoria-assisting.webp";
-import SatyaYogaCaterinaClass from "../../images/caterina-during-a-class.webp";
-import SatyaYogaClassGroup from "../../images/satya-yoga-class-group.jpg";
-import SatyaYogaClassTeaching from "../../images/satya-yoga-teaching.jpg";
-import SatyaYogaClassCommunity from "../../images/satya-yoga-class-community.webp";
+import SatyaYogaClassAngelOmnomLondon from "../../images/satya-yoga-class-angel-omnom-london.webp";
+import SatyaYogaGroupCommunity from "../../images/satya-yoga-group-community.webp";
+import SatyaYogaIslingtonVinyasa from "../../images/satya-yoga-islington-vinyasa.webp";
+import SatyaYogaClassAngelGroup from "../../images/satya-yoga-class-angel-group.webp";
+import SatyaYogaClassAngelLondon from "../../images/satya-yoga-class-angel-london.webp";
+import SatyaYogaCommunityOmnom from "../../images/satya-yoga-community-omnom.webp";
 
 const Community = () => {
 
@@ -53,12 +53,12 @@ const Community = () => {
     }
 
     const carouselArr = [
-        [SatyaYogaGroupClass, 'Satya Yoga Group Class'],
-        [SatyaYogaVittoriaAssisting, 'Satya Yoga Vittoria assisting'],
-        [SatyaYogaCaterinaClass, 'Satya Yoga Community founders'],
-        [SatyaYogaClassGroup, 'Satya Yoga Community Group'],
-        [SatyaYogaClassTeaching, 'Satya Yoga Community Teaching'],
-        [SatyaYogaClassCommunity, 'Satya Yoga Community people after class']
+        [SatyaYogaCommunityOmnom, 'Satya Yoga Community people after class at Omnom in Islington'],
+        [SatyaYogaClassAngelOmnomLondon, 'Satya Yoga Group Class At Omnom London'],
+        [SatyaYogaIslingtonVinyasa, 'Satya Yoga Islington Vinyasa'],
+        [SatyaYogaClassAngelGroup, 'Satya Yoga Community Group'],
+        [SatyaYogaClassAngelLondon, 'Satya Yoga Community Teaching in Islingtons'],
+        [SatyaYogaGroupCommunity, 'Satya Yoga Group Community'],
     ];
 
     return (

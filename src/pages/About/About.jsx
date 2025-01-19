@@ -1,11 +1,10 @@
+import Community from "../../components/Community/Community";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Nav from "../../components/Nav/Nav";
 import TitleMoving from "../../components/TitleMoving/TitleMoving";
 
 import "./About.scss";
-
-import SatyaYogaClassGroup from "../../images/satya-yoga-class-group.jpg";
 
 const About = () => {
     return (
@@ -27,17 +26,16 @@ const About = () => {
                     <div className="about__container-offering">
                         <p className="about__content p-lg"><strong>Offerings</strong></p>
                         <ul className="list">
-                            <li className="list-item">Community Classes</li>
+                            <li className="list-item">Open Level Vinyasa</li>
                             <li className="list-item">Dynamic Vinyasa</li>
                             <li className="list-item">Flow & Restore</li>
                             <li className="list-item">Workshops</li>
                             <li className="list-item">Private Classes</li>
+                            <li className="list-item">Retreats</li>
                         </ul>
                     </div>
                 </div>
-                <div className="about__container-image">
-                    <img className="about__image" src={SatyaYogaClassGroup} alt="Satya Yoga group class" />
-                </div>
+                <Community />
             </div>
             <Footer />
         </>

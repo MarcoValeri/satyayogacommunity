@@ -9,8 +9,8 @@ import Footer from "../../components/Footer/Footer";
 
 import "./Home.scss";
 
-import SatyaYogaClass from "../../images/satya-yoga-class.webp";
-import VictoriaTeacherAssisting from "../../images/victoria-teacher-assisting.webp";
+import SatyaYogaClassAngelGroup from "../../images/satya-yoga-class-angel-group.webp"
+import SatyaYogaStudioOmnom from "../../images/satya-yoga-studio-omnom.webp";
 import Community from "../../components/Community/Community";
 
 const Home = () => {
@@ -50,10 +50,10 @@ const Home = () => {
                 </div>
                 <div className="home__header-container-images">
                     <div className="home__header-container-image-one">
-                        <img className="home__header-image-one" src={SatyaYogaClass} alt="Satya Yoga Class" />
+                        <img className="home__header-image-one" src={SatyaYogaClassAngelGroup} alt="Satya Yoga Class at Angel Studio in London" />
                     </div>
                     <div className="home__header-container-image-two">
-                        <img className="home__header-image-two" src={VictoriaTeacherAssisting} alt="Victoria teachear assisting" />
+                        <img className="home__header-image-two" src={SatyaYogaStudioOmnom} alt="Victoria teachear assisting" />
                     </div>
                 </div>
             </div>

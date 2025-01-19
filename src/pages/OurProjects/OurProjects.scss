@@ -5,6 +5,7 @@
 
     &__container-content {
         padding: 0 10rem;
+        margin-bottom: 5rem;
 
         @include respond("md") {
             padding: 2rem;
@@ -20,4 +21,13 @@
     &__content {
         margin-bottom: 2rem;
     }
+
+    &__container-logos {
+        text-align: center;
+    }
+
+    &__logo {
+        width: 20rem;
+    }
+
 }

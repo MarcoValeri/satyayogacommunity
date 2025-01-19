@@ -16,7 +16,7 @@ const Founders = () => {
                         <img className="founders__content-image" src={SatyaYogaFounders} alt="Caterina and Vittoria, the two founders that are making yoga at the park" />
                     </div>
                     <div className="founders__container-content-info-card">
-                        <p className="founders__container-content-info-card-p p-sm">Satya Yoga was co-founded by the triyoga graduates<br/><a className="link-red" href="https://www.instagram.com/catgiordo/" target="_blank">Caterina Giordo</a> and <a className="link-red" href="https://www.instagram.com/vickivergani/"  target="_blank">Vittoria Vergani</a>.</p>
+                        <p className="founders__container-content-info-card-p p-sm">Satya Yoga was co-founded by triyoga graduates<br/><a className="link-red" href="https://www.instagram.com/catgiordo/" target="_blank">Caterina Giordo</a> and <a className="link-red" href="https://www.instagram.com/vickivergani/"  target="_blank">Vittoria Vergani</a>.</p>
                         <p className="p-sm">Strong advocates for the yoga community, together, they created a supportive space where yogis can connect, grow, and thrive.</p>
                     </div>
                 </div>
