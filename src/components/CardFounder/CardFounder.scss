@@ -1,0 +1,78 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.card-founder {
+    background-color: variable.$pinkLight;
+
+    &__wrapper {
+        display: flex;
+
+        @include mixins.respond("sm") {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__container-image {
+        width: 40%;
+
+        @include mixins.respond("sm") {
+            width: auto;
+            text-align: center;
+            padding: 2rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include mixins.respond("sm") {
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+        }
+    }
+
+    &__container-data {
+        width: 60%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        @include mixins.respond("sm") {
+            width: auto;
+        }
+    }
+
+    &__container-data-close {
+        width: 100%;
+        text-align: right;
+    }
+
+    &__close-icon {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    &__container-data-name {
+        color: variable.$redYoga;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    &__quote {
+        color: variable.$redYoga;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    &__instagram {
+        font-size: 3rem;
+        color: variable.$pinkInstagram;
+    }
+}
