@@ -4,6 +4,7 @@ import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Classes from "./pages/Classes/Classes";
 import Contact from "./pages/Contact/Contact";
+import Workshop from "./pages/Workshop/Workshop";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import AdminLogin from "./pages/AdminLogin/AdminLogin";
 import ProtectedRoute from "./admin/ProtectedRoute/ProtectedRoute";
@@ -28,6 +29,7 @@ const App = () => {
                         <Route exact path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/classes" element={<Classes />} />
+                        <Route path="/workshop" element={<Workshop />} />
                         <Route path="/our-projects" element={<OurProjects />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/login" element={<AdminLogin />} />

@@ -26,6 +26,7 @@ const Nav = () => {
                 <ul className="list-no-disk">
                     <li className="nav__menu-link p-md"><Link to="/about" className="nav__link link-no-style" rel="noopener noreferrer">About us</Link></li>
                     <li className="nav__menu-link p-md"><Link to="/classes" className="nav__link link-no-style" rel="noopener noreferrer">Classes</Link></li>
+                    <li className="nav__menu-link p-md"><Link to="/workshop" className="nav__link link-no-style" rel="noopener noreferrer">Workshop</Link></li>
                     <li className="nav__menu-link p-md"><Link to="/our-projects" className="nav__link link-no-style" rel="noopener noreferrer">Projects</Link></li>
                     <li className="nav__menu-link p-md"><Link to="/contact" className="nav__link link-no-style" rel="noopener noreferrer">Contact us</Link></li>
                 </ul>
