@@ -89,6 +89,10 @@ const Home = () => {
                         content="Classes"
                     />
                     <ButtonSquare
+                        url="/workshop"
+                        content="Workshop"
+                    />
+                    <ButtonSquare
                         url="/our-projects"
                         content="Projects"
                     />

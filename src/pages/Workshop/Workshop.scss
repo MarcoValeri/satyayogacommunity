@@ -1,1 +1,17 @@
-.workshop {}
+.workshop {
+    padding: 0 2rem 10rem 2rem;
+
+    &__container-title {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__container-workshops {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        row-gap: 5rem;
+    }
+}

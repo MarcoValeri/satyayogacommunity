@@ -1,0 +1,56 @@
+@import "../../assets/scss/abstract/mixins";
+@import "../../assets/scss/abstract/variables";
+
+.card-workshop {
+    width: 35rem;
+    padding: 1rem 1rem 2rem 1rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.836),
+        rgba(239, 239, 239, 0.8)
+    );
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-top: 4px solid $redYoga;
+    border-bottom: 4px solid $redYoga;
+    border-radius: 8px;
+
+    @include respond("md") {
+        width: 100%;
+    }
+
+    &__container-icon {
+        text-align: center;
+    }
+
+    &__icon {
+        width: 8rem;
+    }
+
+    &__container-title {
+        padding: 1rem 0;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    &__container-date {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    &__container-address {
+        text-align: center;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
+    &__container-button {
+        text-align: center;
+        padding: 1rem 0;
+    }
+}

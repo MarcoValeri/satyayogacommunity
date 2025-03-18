@@ -20,7 +20,6 @@ const CardFounder = (props) => {
                     </div>
                     <div className="card-founder__container-data-name">
                         <h2 className="card-founder__name h2">{props.founderName}</h2>
-                        <h3 className="card-founder__title h4">{props.founderTitle}</h3>
                     </div>
                     <p className="card-founder__quote p-lg">{props.founderQuote}</p>
                     <a className="card-founder__instagram" href={props.founterInstagram} target="_blank"><FaInstagram /></a>
