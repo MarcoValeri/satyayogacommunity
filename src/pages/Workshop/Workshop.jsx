@@ -10,7 +10,7 @@ const Workshop = () => {
     return (
         <>
             <Nav />
-            <Header title="Workshop" />
+            <Header title="Workshops" />
             <TitleMoving title="Focused workshops and events for all levels" />
             <div className="workshop">
                 <div className="workshop__container-title">
