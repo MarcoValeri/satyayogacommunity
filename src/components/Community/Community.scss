@@ -154,7 +154,7 @@
         font-size: 6rem;
         z-index: 1;
 
-        @include respond("lg") {
+        @include respond("xl") {
             font-size: 4rem;
         }
 
