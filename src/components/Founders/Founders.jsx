@@ -55,7 +55,7 @@ const Founders = () => {
                         founderImage={CaterinaGiordoTeacher}
                         onCloseCard={handleCaterinaCard}
                         founderName="Caterina Giordo"
-                        founderQuote="Cat, a Hatha-Vinyasa yoga teacher, blends strength, flexibility, and fun, encouraging students to present moment awareness"
+                        founderQuote="Cat, a Hatha-Vinyasa yoga teacher, guides students on a journey of self-discovery through intentional practice. She aims to create a supportive yet challenging environment for yogis of all levels, encouraging them to step away from their busy lives and connect with the present moment."
                         founterInstagram="https://www.instagram.com/catgiordo/"
                     />
                 </div>
@@ -67,8 +67,8 @@ const Founders = () => {
                     <CardFounder
                         founderImage={VittoriaVergariTeacher}
                         onCloseCard={handleVittoriaCard}
-                        founderName="Vittoria Vergari"
-                        founderQuote="Thanks to her medical background that allows her to integrate science and spirituality, Vic brings a unique perspective to her practice. She’s a Hatha-Vinyasa yoga teacher and breathwork and meditation teacher"
+                        founderName="Vittoria Vergani"
+                        founderQuote="Thanks to her medical background that allows her to integrate science and spirituality, Vic brings a unique perspective to her practice. She’s a Hatha-Vinyasa yoga teacher and breathwork and meditation teacher."
                         founterInstagram="https://www.instagram.com/vickivergani/"
                     />
                 </div>

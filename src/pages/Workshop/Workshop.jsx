@@ -19,7 +19,7 @@ const Workshop = () => {
                 <div className="workshop__container-workshops">
                     <CardWorkshop
                         title="Yoga and Sound Bath"
-                        description="Join us an afternoon of yoga and sound bath"
+                        description="Join us for an afternoon of yoga and sound bath"
                         date="Saturday 26/04/2025"
                         time="13:00"
                         duration="2 hours"
