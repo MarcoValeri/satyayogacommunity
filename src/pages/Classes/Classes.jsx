@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Nav from "../../components/Nav/Nav";
 
-import { dbGetClassesOrderByDate, dbGetClassesOrderFromToday } from "../../db/dbGetClasses";
+import { dbGetClassesOrderByDate } from "../../db/dbGetClasses";
 import CardClassBook from "../../components/CardClassBook/CardClassBook";
 import TitleMoving from "../../components/TitleMoving/TitleMoving";
 import LoadingLogo from "../../components/LoadingLogo/LoadingLogo";
@@ -21,7 +21,6 @@ const Classes = () => {
             try {
                 const classData = await dbGetClassesOrderByDate();
                 setClasses(classData);
-                
             } catch (err) {
                 setError(err);
                 console.log(`Error fetching classes: ${err}`);
