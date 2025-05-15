@@ -56,7 +56,7 @@ const Workshop = () => {
                                     title={workshop.title}
                                     description={workshop.description}
                                     date={workshop.date}
-                                    time={workshop.date}
+                                    time={workshop.time}
                                     duration={workshop.duration}
                                     address={workshop.address}
                                     buttonLink={workshop.buttonLink}

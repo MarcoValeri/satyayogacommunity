@@ -23,7 +23,7 @@ const workshopContent: WorkshopDetails[] = [
     {
         id: 2,
         title: "Yoga and Sound Bath",
-        description: "Join us for an evening of yoga and sound bath the 16 August at OMNOM in Islington",
+        description: "Join us for an evening of yoga and sound bath",
         date: "Saturday 16/08/2025",
         time: "17:00",
         duration: "120 minutes",
@@ -33,7 +33,7 @@ const workshopContent: WorkshopDetails[] = [
     {
         id: 3,
         title: "Yoga and Sound Bath",
-        description: "Join us for an evening of yoga and sound bath the 13 September at OMNOM in Islington",
+        description: "Join us for an evening of yoga and sound bath",
         date: "Saturday 13/09/2025",
         time: "17:00",
         duration: "120 minutes",
@@ -43,7 +43,7 @@ const workshopContent: WorkshopDetails[] = [
     {
         id: 4,
         title: "Yoga and Sound Bath",
-        description: "Join us for an evening of yoga and sound bath the 11 October at OMNOM in Islington",
+        description: "Join us for an evening of yoga and sound bath",
         date: "Saturday 11/10/2025",
         time: "19:00",
         duration: "120 minutes",
@@ -53,7 +53,7 @@ const workshopContent: WorkshopDetails[] = [
     {
         id: 5,
         title: "Yoga and Sound Bath",
-        description: "Join us for an evening of yoga and sound bath the 15 November at OMNOM in Islington",
+        description: "Join us for an evening of yoga and sound bath",
         date: "Saturday 15/11/2025",
         time: "17:00",
         duration: "120 minutes",
@@ -63,7 +63,7 @@ const workshopContent: WorkshopDetails[] = [
     {
         id: 6,
         title: "Yoga and Sound Bath",
-        description: "Join us for an evening of yoga and sound bath the 20 December at OMNOM in Islington",
+        description: "Join us for an evening of yoga and sound bath",
         date: "Saturday 20/12/2025",
         time: "17:00",
         duration: "120 minutes",
