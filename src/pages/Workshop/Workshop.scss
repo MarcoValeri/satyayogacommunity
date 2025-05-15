@@ -1,3 +1,5 @@
+@import "../../assets/scss/abstract/mixins";
+
 .workshop {
     padding: 0 2rem 10rem 2rem;
 
@@ -13,5 +15,27 @@
         flex-wrap: wrap;
         column-gap: 2rem;
         row-gap: 5rem;
+    }
+
+    &__card-item {
+        animation: fade-in 1s ease-in-out;
+
+        @include respond("md") {
+            width: 100%;
+        }
+    }
+
+    &__container-button {
+        text-align: center;
+        margin: 5rem 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
     }
 }

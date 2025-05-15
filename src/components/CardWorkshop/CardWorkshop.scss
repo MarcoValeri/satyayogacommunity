@@ -15,7 +15,7 @@
     border-radius: 8px;
 
     @include respond("md") {
-        width: 100%;
+        width: auto;
     }
 
     &__container-icon {

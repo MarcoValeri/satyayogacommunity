@@ -1,0 +1,16 @@
+@import "../../assets/scss/abstract/variables";
+
+.button-animated {
+    color: $redYoga;
+    text-decoration: none;
+    background-color: $white;
+    padding: .5rem 4rem;
+    border: 3px solid $redYoga;
+    transition: all .2s;
+    cursor: pointer;
+
+    &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 10px 10px 5px $redYoga;
+    }
+}

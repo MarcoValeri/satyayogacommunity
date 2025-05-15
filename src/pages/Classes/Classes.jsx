@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Nav from "../../components/Nav/Nav";
-
-import { dbGetClassesOrderByDate } from "../../db/dbGetClasses";
 import CardClassBook from "../../components/CardClassBook/CardClassBook";
 import TitleMoving from "../../components/TitleMoving/TitleMoving";
 import LoadingLogo from "../../components/LoadingLogo/LoadingLogo";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+
+import { dbGetClassesOrderByDate } from "../../db/dbGetClasses";
 
 import "./Classes.scss";
 
@@ -45,10 +46,10 @@ const Classes = () => {
                 <Nav />
                 <Header title="Classes" />
                 <div className="classes">
-                    <div className="classes__container-loading">
-                        <h2 className="classes__loading-title h2">Oh no! Looks like our classes are taking a break.</h2>
-                        <p className="p-xl">Check back again soon or <a className="link-red" href="/classes">click here</a>.</p>
-                    </div>
+                    <ErrorMessage
+                        title="Oh no! Looks like our classes are taking a break."
+                        message={`Check back again soon or <a className="link-red" href="/classes">click here</a>.`}
+                    />
                 </div>
                 <Footer />
             </>
