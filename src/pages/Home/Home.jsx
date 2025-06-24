@@ -85,12 +85,8 @@ const Home = () => {
                 </div>
                 <div className="home__main-container-buttons">
                     <ButtonSquare
-                        url="/classes"
-                        content="Classes"
-                    />
-                    <ButtonSquare
-                        url="/workshops"
-                        content="Workshops"
+                        url="/schedule"
+                        content="Schedule"
                     />
                     <ButtonSquare
                         url="/our-projects"

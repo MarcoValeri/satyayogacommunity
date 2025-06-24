@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Nav from "../../components/Nav/Nav";
 import CardClassBook from "../../components/CardClassBook/CardClassBook";
+import CardWorkshop from "../../components/CardWorkshop/CardWorkshop";
 import TitleMoving from "../../components/TitleMoving/TitleMoving";
 import LoadingLogo from "../../components/LoadingLogo/LoadingLogo";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
@@ -44,7 +45,7 @@ const Classes = () => {
         return (
             <>
                 <Nav />
-                <Header title="Classes" />
+                <Header title="Schedule" />
                 <div className="classes">
                     <ErrorMessage
                         title="Oh no! Looks like our classes are taking a break."
@@ -60,7 +61,7 @@ const Classes = () => {
         return (
             <>
                 <Nav />
-                <Header title="Classes" />
+                <Header title="Schedule" />
                 <div className="classes">
                     <div className="classes__container-loading">
                         <LoadingLogo title="Loading..." />
@@ -74,7 +75,7 @@ const Classes = () => {
     return (
         <>
             <Nav />
-            <Header title="Classes" />
+            <Header title="Schedule" />
             <TitleMoving title="Satya Yoga offers accessible high quality yoga" />
             <div className="classes">
                 <div className="classes__container-title">
